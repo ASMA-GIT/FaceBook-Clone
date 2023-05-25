@@ -1,0 +1,211 @@
+<wm-partial name="partial1">
+    <wm-container name="container1" display="flex" horizontalalign="center" padding="2em unset unset unset">
+        <wm-picture resizemode="cover" name="picture1" shape="circle" width="60px" height="60px" margin="unset 10px" picturesource="bind:Variables.svGetUserByEmail.dataSet.profileImage"></wm-picture>
+        <wm-composite name="composite6" width="100%">
+            <wm-container class="col-md-9" name="container12" width="100%">
+                <wm-text name="text5" margin="unset unset unset 5px" placeholder="What's on your mind?" width="95%" backgroundcolor="#e6e6e6" class="post-text"></wm-text>
+            </wm-container>
+        </wm-composite>
+    </wm-container>
+    <hr>
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="6" name="gridcolumn1" horizontalalign="center">
+                <wm-button class="btn-link" caption="Vedio" type="button" margin="unset 0.5em" name="vedio" iconclass="fa fa-video-camera" on-click="Widgets.CreateVedioPost.open()"></wm-button>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="6" name="gridcolumn6" horizontalalign="center">
+                <wm-button class="btn-link" caption="Photo" type="button" margin="unset 0.5em" name="photo" iconclass="fa fa-photo" on-click="Widgets.createImagePost.open()"></wm-button>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <wm-dialog dialogtype="design-dialog" name="CreateVedioPost" title="svCreatePost Info" iconclass="wi wi-edit" modal="true">
+        <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svCreatePost.dataSet" captionalign="left" name="createPostForm1_1" on-success="Widgets.svcreatepostDialog.close()"
+            on-beforesubmit="createPostForm1_1Beforesubmit($event, widget, $data)">
+            <wm-layoutgrid columns="1" name="layoutgrid6_1">
+                <wm-gridrow name="gridrow20_1">
+                    <wm-composite name="composite3">
+                        <wm-label class="h4 control-label" caption="Post Details" name="label2"></wm-label>
+                    </wm-composite>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow21_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn24">
+                        <wm-form-field name="Post_createdAt" readonly="false" displayname="Created At" key="Post.createdAt" type="timestamp" show="false" widget="timestamp" datepattern="MMM d, y h:mm:ss a" placeholder="Select date time"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow22">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn25">
+                        <wm-form-field name="Post_fromUserId" readonly="false" displayname="From User Id" key="Post.fromUserId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow23">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn26">
+                        <wm-form-field name="Post_id" readonly="false" displayname="Id" key="Post.id" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow24">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn27_1">
+                        <wm-form-field name="Post_likes" readonly="false" displayname="Likes" key="Post.likes" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow25">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn28_2">
+                        <wm-form-field name="Post_post" readonly="false" displayname="Post" key="Post.post" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                        <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload3" on-select="Variables.FileServiceUploadFile2.invoke()" maxfilesize="30"></wm-fileupload>
+                        <wm-label padding="unset 0.5em" name="label4" caption="upload your image here"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow26">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn29_1">
+                        <wm-form-field name="Post_postContent" readonly="false" displayname="Post Content" key="Post.postContent" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow27">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn30">
+                        <wm-form-field name="Post_postTypeId" readonly="false" displayname="Post Type Id" key="Post.postTypeId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="1"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow28">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn31">
+                        <wm-form-field name="Post_withUserId" readonly="false" displayname="With User Id" key="Post.withUserId" type="integer" show="true" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="sceditprofileimageDialog" title="" iconclass="wi wi-edit" modal="true">
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.scEditProfileImage.dataSet" captionalign="left" name="editUsersForm1" on-success="Widgets.sceditprofileimageDialog.close()">
+            <wm-layoutgrid columns="1" name="layoutgrid6_2">
+                <wm-gridrow name="gridrow30"></wm-gridrow>
+                <wm-gridrow name="gridrow31">
+                    <wm-composite name="composite4">
+                        <wm-label class="h4 control-label" caption="Users Details" name="label5"></wm-label>
+                    </wm-composite>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow32">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn29_2">
+                        <wm-form-field readonly="false" name="Users_bio" displayname="Bio" key="Users.bio" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow33">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn30_1">
+                        <wm-form-field readonly="false" name="Users_coverImage" displayname="Cover Image" key="Users.coverImage" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow34">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn31_1">
+                        <wm-form-field readonly="false" name="Users_dob" displayname="Dob" key="Users.dob" type="date" show="true" widget="date"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow35">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn32">
+                        <wm-form-field readonly="false" name="Users_email" displayname="Email" key="Users.email" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow36">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn33">
+                        <wm-form-field readonly="false" name="Users_fname" displayname="Fname" key="Users.fname" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow37">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn34">
+                        <wm-form-field readonly="false" name="Users_genderId" displayname="Gender Id" key="Users.genderId" type="integer" show="true" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow38">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn35">
+                        <wm-form-field readonly="false" name="Users_id" displayname="Id" key="Users.id" type="integer" show="true" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow39">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn36">
+                        <wm-form-field readonly="false" name="Users_lname" displayname="Lname" key="Users.lname" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow40">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn37">
+                        <wm-form-field readonly="false" name="Users_passcode" displayname="Passcode" key="Users.passcode" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow41">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn38">
+                        <wm-form-field readonly="false" name="Users_phNo" displayname="Ph No" key="Users.phNo" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow42">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn39">
+                        <wm-form-field readonly="false" name="Users_profileImage" displayname="Profile Image" key="Users.profileImage" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow43">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn40">
+                        <wm-form-field readonly="false" name="Users_relationshipStatusId" displayname="Relationship Status Id" key="Users.relationshipStatusId" type="integer" show="true" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow44">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn41">
+                        <wm-form-field readonly="false" name="Users_websiteLink" displayname="Website Link" key="Users.websiteLink" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" class="form-reset btn-default" iconclass="wi wi-refresh" display-name="Reset" type="reset"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" type="submit"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="ImagePost" title="Post" iconclass="wi wi-edit" modal="true">
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svCreateImagePost.dataSet" captionalign="left" name="createPostForm1" on-beforesubmit="createPostForm1Beforesubmit($event, widget, $data)">
+            <wm-layoutgrid columns="1" name="layoutgrid6">
+                <wm-gridrow name="gridrow36_1"></wm-gridrow>
+                <wm-gridrow name="gridrow37_1">
+                    <wm-composite name="composite4_1">
+                        <wm-label class="h4 control-label" caption="Post Details" name="label5_1"></wm-label>
+                    </wm-composite>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow38_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn34_1">
+                        <wm-form-field readonly="false" name="Post_createdAt" displayname="Created At" key="Post.createdAt" type="timestamp" show="false" widget="timestamp"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow39_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn35_1">
+                        <wm-form-field readonly="false" name="Post_fromUserId" displayname="From User Id" key="Post.fromUserId" type="integer" show="false" widget="number" textalign="right" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow40_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn36_1">
+                        <wm-form-field readonly="false" name="Post_id" displayname="Id" key="Post.id" type="integer" show="false" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow41_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn37_1">
+                        <wm-form-field readonly="false" name="Post_likes" displayname="Likes" key="Post.likes" type="integer" show="false" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow42_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn38_1">
+                        <wm-form-field readonly="false" name="Post_post" displayname="Post" key="Post.post" type="string" show="true" widget="text"></wm-form-field>
+                        <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload4" on-select="Variables.FileServiceUploadFile6.invoke()"></wm-fileupload>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow43_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn39_1">
+                        <wm-form-field readonly="false" name="Post_postContent" displayname="Post Content" key="Post.postContent" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow44_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn40_1">
+                        <wm-form-field readonly="false" name="Post_postTypeId" displayname="Post Type Id" key="Post.postTypeId" type="integer" show="false" widget="number" textalign="right" defaultvalue="2"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow45">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn41_1">
+                        <wm-form-field readonly="false" name="Post_withUserId" displayname="With User Id" key="Post.withUserId" type="integer" show="false" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" class="form-reset btn-default" iconclass="wi wi-refresh" display-name="Reset" type="reset"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" type="submit"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+</wm-partial>

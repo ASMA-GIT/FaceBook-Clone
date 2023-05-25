@@ -1,0 +1,15 @@
+<wm-partial type="leftnav" name="partial1">
+    <wm-label padding="unset 0.5em" name="label1" class="h1" caption="Friends" fontweight="bold"></wm-label>
+    <wm-nav type="pills" layout="stacked" name="nav1">
+        <wm-nav-item name="nav_item1">
+            <wm-anchor caption="AllFriends" iconclass="glyphicon glyphicon-dashboard fa-2x" class="active" name="anchor1" on-click="Actions.goToPage_friends.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item2">
+            <wm-anchor caption="Suggestions" iconclass="fa fa-user-plus fa-2x" name="anchor2" on-click="Actions.goToPage_Suggestions.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item3">
+            <wm-anchor caption="Birthdays" iconclass="fa fa-birthday-cake fa-2x" name="anchor3" on-click="Actions.goToPage_birthdays.invoke()"></wm-anchor>
+            <wm-anchor caption="Requests" iconclass="wm-sl-r sl-time fa-2x" on-click="Actions.goToPage_friendRequest.invoke()" name="anchor4"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

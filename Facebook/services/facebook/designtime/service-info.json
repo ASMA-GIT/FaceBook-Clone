@@ -1,0 +1,7 @@
+{
+  "id" : "facebook",
+  "type" : "DataService",
+  "packageNames" : [ "com.facebook.facebook" ],
+  "title" : "facebook",
+  "mockEnabled" : false
+}

@@ -1,0 +1,28 @@
+.headerrow{
+    background-color: white !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px !important;
+    color: black !important;
+}
+.search{
+    background-color: #f0f0f0 !important;
+    border-radius: 15px;
+    color:black !important;
+}
+.navicons{
+    color: black;
+
+}
+.icons{
+    color: black !important;
+}
+.navicons:hover{
+    background-color: #e8eaeb; 
+    color: blue !important;
+    border-bottom: 1.5px solid blue; 
+}
+
+.find-btn{
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px;
+}

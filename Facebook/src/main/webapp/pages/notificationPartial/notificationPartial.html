@@ -1,0 +1,37 @@
+<wm-partial name="partial1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                <wm-label padding="unset 0.5em" name="label1" class="h2" fontweight="bold" caption="Notifications"></wm-label>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="4" name="gridcolumn3">
+                <wm-label padding="unset 0.5em" name="label3" caption="Earlier" fontweight="bold"></wm-label>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="6" name="gridcolumn4"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn9" horizontalalign="right">
+                <wm-anchor margin="unset 0.5em" name="anchor1" caption="See all" fontweight="bold" on-click="Actions.goToPage_notifications.invoke()"></wm-anchor>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow3">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="none" name="CommentList1" dataset="bind:Variables.dvDisplayNotificationPopover.dataSet"
+                    navigation="On-Demand" paginationclass="btn-default">
+                    <wm-listtemplate layout="inline" name="listtemplate1">
+                        <wm-container class="media-left" name="container3">
+                            <wm-picture width="32pt" height="32pt" name="Picture" shape="circle" class="media-object" picturesource="bind:Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.profileImage"></wm-picture>
+                        </wm-container>
+                        <wm-container class="media-body" name="container4">
+                            <wm-label class="p media-heading" name="notification_content" caption="bind:Variables.dvDisplayNotificationPopover.dataSet[$i].notifyType.id==1?(&quot;you have a friend request from &quot;+Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.fname + ' '+Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.lname):Variables.dvDisplayNotificationPopover.dataSet[$i].notifyType.id==2?(&quot;your friend request has been accepted by&quot;+Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.fname + ' '+Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.lname):Variables.dvDisplayNotificationPopover.dataSet[$i].notifyType.id==3?(Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.fname + ' '+Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.lname+&quot;has liked your post&quot;):Variables.dvDisplayNotificationPopover.dataSet[$i].notifyType.id==2?(Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.fname + ' '+Variables.dvDisplayNotificationPopover.dataSet[$i].usersBySenderId.lname+&quot;has commented on your post&quot;):&quot; &quot;"
+                                fontunit="em" padding="unset unset unset 0.5em" fontweight="bold"></wm-label>
+                            <wm-container name="container3_1" horizontalalign="right">
+                                <wm-label padding="unset 0.5em" name="label5" caption="bind:Variables.dvDisplayNotificationPopover.dataSet[$i].notifyTime | timeFromNow"></wm-label>
+                            </wm-container>
+                        </wm-container>
+                    </wm-listtemplate>
+                </wm-list>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

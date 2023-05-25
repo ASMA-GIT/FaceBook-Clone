@@ -1,0 +1,47 @@
+<wm-page pagetitle="Events" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftpanel_Events" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                        <wm-label padding="unset 0.5em" name="label5" caption=""></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn2"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-list listclass="list-group" template="true" template-name="Product Overview" itemsperrow="xs-1 sm-2 md-3 lg-3" class="list-card" statehandler="URL" name="EventsList1" dataset="bind:Variables.FacebookEventsData.dataSet" navigation="Scroll"
+                title="Events" fontweight="bold">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-card name="Picture" picturesource="bind:Variables.FacebookEventsData.dataSet[$i].image" title="bind:Variables.FacebookEventsData.dataSet[$i].eventTitle" subheading="bind:Variables.FacebookEventsData.dataSet[$i].createdAt | timeFromNow"
+                        imageheight="170px" animation="fadeInUp">
+                        <wm-card-content padding="1.5em unset unset unset" name="card_content1">
+                            <wm-button class="btn-fab btn-warning pull-right btn-lg" caption="" type="button" name="button2" iconclass="fa fa-calendar-plus-o" margin="-3.5em 0.5em unset unset"></wm-button>
+                            <wm-layoutgrid name="layoutgrid2">
+                                <wm-gridrow name="gridrow3">
+                                    <wm-gridcolumn columnwidth="6" horizontalalign="left" class="col-xs-6" name="gridcolumn5">
+                                        <wm-label name="Price" caption="bind:Variables.FacebookEventsData.dataSet[$i].startDate | toDate: 'dd/MM/yyyy'" fontsize="1.286" fontunit="em"></wm-label>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" horizontalalign="right" class="col-xs-6" name="gridcolumn6">
+                                        <wm-label name="Quantity" fontsize="1.286" fontunit="em" caption="Quantity" margin="unset 0.2em unset unset"></wm-label>
+                                        <wm-label name="HelpText" caption="Available"></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                            <wm-label name="Description" class="p text-muted" caption="bind:Variables.FacebookEventsData.dataSet[$i].content"></wm-label>
+                        </wm-card-content>
+                        <wm-card-footer horizontalalign="center" name="card_footer1">
+                            <wm-anchor caption="bind:Variables.FacebookEventsData.dataSet[$i].users.email" class="btn btn-transparent" name="anchor1"></wm-anchor>
+                        </wm-card-footer>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-list>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

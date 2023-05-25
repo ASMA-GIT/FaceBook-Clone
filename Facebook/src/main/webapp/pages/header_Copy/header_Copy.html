@@ -1,0 +1,40 @@
+<wm-partial name="header" type="header">
+    <wm-layoutgrid name="headerlayout">
+        <wm-gridrow name="headerrow">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="1" horizontalalign="left" padding="unset unset unset 10px">
+                <wm-icon name="icon1" iconclass="resources/images/logos/facebook-logo.png" animation="bounceIn"></wm-icon>
+                <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/logos/facebook-logo.png" height="40" shape="circle"></wm-picture>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn9">
+                <wm-container name="container1" display="inline-flex">
+                    <wm-icon name="icon2" iconsize="20px" iconclass="wm-sl-l sl-search"></wm-icon>
+                    <wm-search name="searchFriends" type="autocomplete" matchmode="startignorecase"></wm-search>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn11"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn11_1"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="3" name="gridcolumn5" horizontalalign="center">
+                <wm-nav type="pills" autoclose="outsideClick" name="nav1" horizontalalign="center">
+                    <wm-nav-item name="nav_item1">
+                        <wm-anchor caption="Link 1" name="anchor5"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item2">
+                        <wm-anchor caption="Link 2" name="anchor6"></wm-anchor>
+                    </wm-nav-item>
+                    <wm-nav-item name="nav_item3">
+                        <wm-anchor caption="Link 3" name="anchor7"></wm-anchor>
+                    </wm-nav-item>
+                </wm-nav>
+            </wm-gridcolumn>
+            <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="1" padding="1em 1em unset unset">
+                <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button1"></wm-button>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn13" horizontalalign="center">
+                <wm-anchor margin="unset 0.5em" name="Notify" width="90%" height="100%" iconclass="fa fa-bell fa-lg" caption=""></wm-anchor>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn14" horizontalalign="right" padding="unset 10px unset unset">
+                <wm-picture resizemode="cover" name="picture5" height="40" shape="circle" picturesource="bind:Variables.getUser.dataSet[$i].users.profileImage"></wm-picture>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

@@ -1,0 +1,17 @@
+<wm-partial name="leftnav" type="leftnav">
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="list_dashboard">
+            <wm-anchor caption="Home" name="profileLink" iconclass="fa fa-home fa-2x" on-click="Actions.goToPage_Home.invoke()"></wm-anchor>
+            <wm-anchor caption="UserName" iconclass="fa fa-user fa-2x" on-click="Actions.goToPage_Profile.invoke()" name="anchor5"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order">
+            <wm-anchor caption="Find friends" name="friendsLink" iconclass="fa fa-users fa-2x" on-click="Actions.goToPage_friends.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_inventory">
+            <wm-anchor caption="Events" name="eventsLink" iconclass="fa fa-calendar-plus-o fa-2x" on-click="Actions.goToPage_events.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="Saved" name="savedPostsLink" iconclass="fa fa-bookmark-o fa-2x" on-click="Actions.goToPage_savedPost.invoke()"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

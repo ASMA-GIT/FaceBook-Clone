@@ -1,0 +1,126 @@
+<wm-page pagetitle="Friends" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftpanel_Copy" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-container name="container6" display="flex">
+                <wm-layoutgrid name="layoutgrid6">
+                    <wm-gridrow name="gridrow14">
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn27"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="10" name="gridcolumn31">
+                            <wm-label padding="unset 0.5em" name="label5" caption="" fontweight="bold" class="h2"></wm-label>
+                            <wm-label padding="unset 0.5em" caption="Your friends list" class="h3" name="label7" textalign="center"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn32"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow15">
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn29"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="10" name="gridcolumn30"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn33"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow16">
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn34"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="10" name="gridcolumn36">
+                            <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Media List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list friend-card" statehandler="none" name="FriendList1_1" dataset="bind:Variables.FacebookFriendsList1test.dataSet"
+                                navigation="Scroll" nodatamessage="">
+                                <wm-listtemplate layout="media" name="listtemplate2_1">
+                                    <wm-container class="media-left media-top" name="container4_1">
+                                        <wm-picture name="Picture" class="media-object" width="32pt" height="32pt" picturesource="bind:Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.profileImage" shape="circle"></wm-picture>
+                                    </wm-container>
+                                    <wm-container class="media-body" padding="unset 1.5em unset 1.25em" name="container5_1">
+                                        <wm-label class="pull-left" caption="bind:Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.fname +' '+ Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.lname" name="Name" margin="0em unset 0.5em unset"
+                                            fontsize="1.143" fontunit="em" fontweight="bold"></wm-label>
+                                        <wm-label caption="Description" name="Description" class="p text-muted"></wm-label>
+                                    </wm-container>
+                                    <wm-container class="media-right" horizontalalign="right" padding="unset 1em unset unset" name="container6_1">
+                                        <wm-button class="btn-primary" caption="view" type="button" margin="unset 0.5em" name="button2" color="#ffffff" padding="unset 10px" width="70"></wm-button>
+                                    </wm-container>
+                                </wm-listtemplate>
+                            </wm-list>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn39"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow17">
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn40"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="10" name="gridcolumn41">
+                            <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Media List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="none" name="FriendList1" dataset="bind:Variables.FacebookFriendsList2Test.dataSet"
+                                navigation="Scroll" nodatamessage="add more friends to the list">
+                                <wm-listtemplate layout="media" name="listtemplate3_1">
+                                    <wm-container class="media-left media-top" name="container7_1">
+                                        <wm-picture name="Picture" class="media-object" width="32pt" height="32pt" shape="circle" picturesource="bind:Variables.FacebookFriendsList2Test.dataSet[$i].usersByUser1Id.profileImage"></wm-picture>
+                                    </wm-container>
+                                    <wm-container class="media-body" padding="unset 1.5em unset 1.25em" name="container8_1">
+                                        <wm-label class="pull-left" caption="bind:Variables.FacebookFriendsList2Test.dataSet[$i].usersByUser1Id.fname+' '+Variables.FacebookFriendsList2Test.dataSet[$i].usersByUser1Id.lname" name="Name" margin="0em unset 0.5em unset"
+                                            fontsize="1.143" fontunit="em" fontweight="bold"></wm-label>
+                                        <wm-label caption="Description" name="Description" class="p text-muted"></wm-label>
+                                    </wm-container>
+                                    <wm-container class="media-right" horizontalalign="right" padding="unset 1em unset unset" name="container9">
+                                        <wm-button class="btn-primary" caption="view" type="button" margin="unset 0.5em" color="#ffffff" padding="unset 10px" width="70" name="button3"></wm-button>
+                                    </wm-container>
+                                </wm-listtemplate>
+                            </wm-list>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="1" name="gridcolumn42"></wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-layoutgrid name="layoutgrid5">
+                    <wm-gridrow name="gridrow18">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn43">
+                            <wm-label padding="unset 0.5em" caption="" fontweight="bold" class="h2" name="label12"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn44"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn23_1">
+                            <wm-label padding="unset 0.5em" caption="" fontweight="bold" class="h2" name="label11"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn24_1"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow20">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn47"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn48"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow19">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn45">
+                            <wm-label padding="unset 0.5em" caption="" fontweight="bold" class="h2" name="label13"></wm-label>
+                            <wm-label padding="unset 0.5em" caption="" fontweight="bold" class="h2" name="label14"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn46"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn25" height="800px">
+                            <wm-container name="container10" height="800px" backgroundcolor="#ffffff"></wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-container>
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn13"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn14"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow8"></wm-gridrow>
+                <wm-gridrow name="gridrow9">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn19"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn20"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn21"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn22"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn23"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn24"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn16_2"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn5"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn6"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

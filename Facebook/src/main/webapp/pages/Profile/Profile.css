@@ -1,0 +1,18 @@
+.wm-app .app-tile{
+    box-shadow: none !important;
+}
+.profile-pic{
+    margin-left: -25px !important;
+}
+.cover-image{
+    border-radius: 10px;
+}
+.hobbie-name{
+    border-radius: 10px;
+}
+.tab-body{
+    background-color: #edeef0;
+}
+.intro{
+    background-color: white;
+}

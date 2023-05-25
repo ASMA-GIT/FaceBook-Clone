@@ -1,0 +1,18 @@
+<wm-page pagetitle="Ttesting" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-table statehandler="URL" name="UsersTable1" title="Users List" dataset="bind:Variables.FacebookUsersData.dataSet" navigation="Basic">
+                <wm-table-column binding="id" caption="Id" generator="identity" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column>
+                <wm-table-column binding="fname" caption="Fname" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="lname" caption="Lname" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="dob" caption="Dob" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="date"></wm-table-column>
+                <wm-table-column binding="phNo" caption="Ph No" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="email" caption="Email" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="passcode" caption="Passcode" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="profileImage" caption="Profile Image" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="coverImage" caption="Cover Image" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="bio" caption="Bio" generator="assigned" pcdisplay="true" mobiledisplay="true" tabletdisplay="true" type="string"></wm-table-column>
+            </wm-table>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

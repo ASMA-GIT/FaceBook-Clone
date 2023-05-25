@@ -1,0 +1,46 @@
+<wm-page pagetitle="Friends" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftpanel_Copy" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn5">
+                        <wm-label padding="unset 0.5em" name="label1" caption=""></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn2"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn3"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn4">
+                        <wm-label padding="unset 0.5em" name="label2" caption="Suggested Users" fontweight="bold"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn6"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn7"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn8">
+                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Media List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="none" name="UsersList1" dataset="bind:Variables.svGetAllSuggestedusers.dataSet"
+                            navigation="Scroll">
+                            <wm-listtemplate layout="media" name="listtemplate1">
+                                <wm-container class="media-left media-top" name="container1">
+                                    <wm-picture name="Picture" class="media-object" width="32pt" height="32pt" picturesource="bind:Variables.svGetAllSuggestedusers.dataSet[$i].profileImage" shape="circle"></wm-picture>
+                                </wm-container>
+                                <wm-container class="media-body" padding="unset 1.5em unset 1.25em" name="container2">
+                                    <wm-label class="pull-left" caption="bind:Variables.svGetAllSuggestedusers.dataSet[$i].fname+' '+Variables.svGetAllSuggestedusers.dataSet[$i].lname" name="Name" margin="0em unset 0.5em unset" fontsize="1.143" fontunit="em"></wm-label>
+                                    <wm-label caption="bind:Variables.svGetAllSuggestedusers.dataSet[$i].bio" name="Description" class="p text-muted"></wm-label>
+                                </wm-container>
+                                <wm-container class="media-right" horizontalalign="right" padding="unset 1em unset unset" name="container3">
+                                    <wm-button class="btn-primary" caption="request" type="button" margin="unset 0.5em" name="button1" color="#ffffff" on-click="Variables.dvCreateFriendRequest.createRecord()" width="70"></wm-button>
+                                </wm-container>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn9"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -1,0 +1,11 @@
+.app-grid-layout .app-grid-row .app-grid-column .app-livelist .app-livelist-container .app-list-item .app-grid-layout{
+    background-color: white;
+    /*padding: 15px;*/
+    border-radius: 10px; 
+    /*margin:20px 0px;*/
+
+}
+.post-card{
+    padding: 15px;
+    margin:20px 0px;
+}

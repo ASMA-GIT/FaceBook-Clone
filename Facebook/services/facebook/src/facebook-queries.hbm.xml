@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="getLoggedUserPosts">
+        <![CDATA[
+        select * from post where from_user_id=:logged_user_id
+        ]]>
+    <query-param name="logged_user_id" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="getLoggedUserPosts__count">
+        <![CDATA[
+        select count(*) from (select * from post where from_user_id=:logged_user_id) wmTempTable
+        ]]>
+    <query-param name="logged_user_id" type="java.lang.String"/>
+    </sql-query>
+</hibernate-mapping>

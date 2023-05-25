@@ -1,0 +1,24 @@
+{
+  "svGetUser" : {
+    "_id" : "wm-svGetUser-wm.ServiceVariable-1683047839363",
+    "name" : "svGetUser",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.facebook.facebook.Users",
+    "service" : "facebook",
+    "operation" : "getUsers",
+    "operationId" : "UsersController_getUsers",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Users"
+  }
+}

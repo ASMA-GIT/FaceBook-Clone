@@ -1,0 +1,39 @@
+.wm-app .app-content-column {
+    padding-top: 0px;
+}
+
+.wm-app .app-footer .app-grid-layout .app-grid-row .app-grid-column,
+.wm-app .app-header .app-grid-layout .app-grid-row .app-grid-column {
+    text-align: center;
+}
+
+.profilepic {
+    margin-top: -15%;
+    padding: 5px;
+}
+
+.wm-app .app-header .app-grid-layout .app-grid-row .app-grid-column[name="headerleft"] img,
+.wm-app .app-mobile-header .app-grid-layout .app-grid-row .app-grid-column[name="headerleft"] img {
+    padding: 0;
+}
+
+.leftnav {
+    position: fixed;
+    /*max-height: 100%;*/
+    /*overflow-y: scroll;*/
+}
+
+
+/*.app-page-content .app-grid-layout.clearfix .app-grid-row.clearfix .app-grid-column:name["gridcolumn6"] {*/
+
+
+/*    background: white;*/
+
+
+/*    padding: 12px;*/
+
+
+/*    border-radius: 9px;*/
+
+
+/*}*/

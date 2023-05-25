@@ -1,0 +1,906 @@
+<wm-page name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1" backgroundcolor="#F7F8FA">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" padding=".5em" name="gridcolumn1">
+                        <wm-tile name="tile1" backgroundcolor="#F7F8FA">
+                            <wm-layoutgrid name="layoutgrid2">
+                                <wm-gridrow name="gridrow2">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" padding="1em 0em 0em 0em" name="gridcolumn2">
+                                        <wm-layoutgrid name="layoutgrid6">
+                                            <wm-gridrow name="gridrow12">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn21">
+                                                    <wm-picture resizemode="cover" name="picture2" width="85%" height="350px" picturesource="bind:Variables.svGetUserByEmail.dataSet.coverImage" class="cover-image"></wm-picture>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow13">
+                                                <wm-gridcolumn columnwidth="3" name="gridcolumn23" horizontalalign="right">
+                                                    <wm-container name="container10_1" display="block">
+                                                        <wm-picture shape="circle" picturesource="bind:Variables.svGetUserByEmail.dataSet.profileImage" pictureaspect="None" textalign="left" bordercolor="#c7c7c7" borderstyle="solid" borderwidth="1px" name="picture1"
+                                                            width="150px" height="150px" class="profilepic"></wm-picture>
+                                                        <wm-button class="btn-default profile-pic" caption="" type="button" margin="unset 0.5em" name="button3" iconclass="fa fa-camera" on-click="Widgets.editprofilepictureDialog.open()"></wm-button>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="3" name="gridcolumn25" horizontalalign="left" padding="unset unset unset 3em">
+                                                    <wm-label width="100%" caption="bind:Variables.svGetUserByEmail.dataSet.fname + ' '+Variables.svGetUserByEmail.dataSet.lname" fontweight="bold" class="h1" name="label1" color="#000000" backgroundattachment="fixed"
+                                                        padding="unset unset 0px unset" margin="unset unset 0px unset"></wm-label>
+                                                    <wm-anchor caption="bind:Variables.svGetUserByEmail.dataSet.email" display="inline" name="anchor1" padding="0px unset unset unset" margin="0px unset unset unset"></wm-anchor>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="5" name="gridcolumn26">
+                                                    <wm-layoutgrid name="layoutgrid18">
+                                                        <wm-gridrow name="gridrow57">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn105_1">
+                                                                <wm-label padding="unset 0.5em" name="label35_2" caption=""></wm-label>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn106_1"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow58">
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn107_1">
+                                                                <wm-label padding="unset 0.5em" caption="" name="label36_1"></wm-label>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="6" name="gridcolumn108_1"></wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                    <wm-container name="container21" horizontalalign="right">
+                                                        <wm-button class="btn-default" caption="Add Cover Photo" type="button" margin="unset 0.5em" name="button14" iconclass="fa fa-plus" color="#ffffff" backgroundcolor="blue" fontweight="bold" on-click="Widgets.coverImage.open()"></wm-button>
+                                                        <wm-button class="btn-default" caption="Edit Profile" type="button" margin="unset 0.5em" name="button15" iconclass="wi wi-mode-edit" backgroundcolor="#dadada" fontweight="bold" on-click="Widgets.EditProfile.open()"></wm-button>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="1" name="gridcolumn100"></wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow3"></wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <hr>
+                        <wm-layoutgrid name="layoutgrid7">
+                            <wm-gridrow name="gridrow14">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn24_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn27" horizontalalign="left">
+                                    <wm-tabs type="static" statehandler="URL" name="tabs1" horizontalalign="left">
+                                        <wm-tabpane name="tabpane1" title="Posts">
+                                            <wm-layoutgrid name="layoutgrid27">
+                                                <wm-gridrow name="gridrow123_1">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn172_1" horizontalalign="center">
+                                                        <wm-container name="container2_1" class="app-elevated-container intro" padding=".7em unset">
+                                                            <wm-label padding="unset 0.5em" name="containerHeading" caption="Intro" fontweight="bold" class="h3"></wm-label>
+                                                            <wm-label padding="unset 0.5em" caption="bind:Variables.svGetUserByEmail.dataSet.bio" class="h4" name="label64_1" textalign="center"></wm-label>
+                                                            <wm-button class="btn-secondary" caption="Edit Bio" type="button" margin="10px 0.5px" name="Bio" width="90%" fontweight="bold" borderstyle="double" on-click="Widgets.UserbioDialog.open()"
+                                                                color="#000000"></wm-button>
+                                                            <wm-list listclass="list-group" itemsperrow="xs-2 sm-2 md-3 lg-3" template="true" template-name="Contact Card" class="list-card" statehandler="none" dataset="bind:Variables.dvGetUserHobbies.dataSet"
+                                                                navigation="Scroll" horizontalalign="left" name="list5_1" padding="unset unset unset 3em">
+                                                                <wm-listtemplate layout="media" name="listtemplate5">
+                                                                    <wm-container on-click="Variables.dvAddHobbies.createRecord()" name="container22" display="flex">
+                                                                        <wm-label padding=".5em" caption="bind:Variables.dvGetUserHobbies.dataSet[$i].hobbieType.hobbieName" borderstyle="solid" borderwidth=".8px" bordercolor="#e0e0e0" name="label65_1" class="hobbie-name"
+                                                                            margin="unset 5px" textalign="center"></wm-label>
+                                                                    </wm-container>
+                                                                </wm-listtemplate>
+                                                            </wm-list>
+                                                            <wm-button class="btn-secondary" caption="Add Hobbies" type="button" margin="10px 0.5px" name="hobbies" width="90%" fontweight="bold" on-click="Widgets.addHobbies.open()" color="#000000"></wm-button>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="1" name="gridcolumn163"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn173">
+                                                        <wm-container name="container22_1" content="inputPostPartial"></wm-container>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow124_1">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn174_1"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn175_1"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-tabpane>
+                                        <wm-tabpane name="tabpane2" title="About" borderstyle="solid">
+                                            <wm-layoutgrid name="layoutgrid6_2">
+                                                <wm-gridrow name="gridrow13_2">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn22">
+                                                        <wm-container name="container17_1" class="app-elevated-container intro">
+                                                            <wm-layoutgrid name="layoutgrid13_1">
+                                                                <wm-gridrow name="gridrow45_1">
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn70_1">
+                                                                        <wm-label padding="unset 0.5em" name="label34_1" caption="Work" fontweight="bold" class="h3"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn71"></wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow46">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn72">
+                                                                        <wm-button class="btn-link" caption="add work place" type="button" margin="unset 0.5em" name="button7" iconclass="wi wi-add-circle-outline fa-lg" on-click="Widgets.AddWorkDialogue.open()"></wm-button>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow47">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn74">
+                                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="none"
+                                                                            name="WorkingList1" dataset="bind:Variables.svWorkGetDetails.dataSet" navigation="Scroll" nodatamessage="" loadingdatamsg="" width="90%">
+                                                                            <wm-listtemplate layout="inline" name="listtemplate5_1">
+                                                                                <wm-container class="media-left" name="container21_3">
+                                                                                    <wm-icon name="icon4_1" iconclass="fa fa-laptop"></wm-icon>
+                                                                                </wm-container>
+                                                                                <wm-container class="media-body" name="container22_3">
+                                                                                    <wm-label class="p media-heading" name="Name" caption="bind:Variables.svWorkGetDetails.dataSet[$i].companyName" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                                                                                </wm-container>
+                                                                            </wm-listtemplate>
+                                                                        </wm-list>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="1" name="gridcolumn165_1"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn23_1">
+                                                        <wm-container name="container18" class="app-elevated-container intro">
+                                                            <wm-layoutgrid name="layoutgrid14">
+                                                                <wm-gridrow name="gridrow48">
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn76">
+                                                                        <wm-label padding="unset 0.5em" caption="Education" fontweight="bold" class="h3" name="university"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn77"></wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow49">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn78">
+                                                                        <wm-button class="btn-link" caption="add university" type="button" margin="unset 0.5em" iconclass="wi wi-add-circle-outline fa-lg" name="button8" on-click="Widgets.svcreateeducationDialog.open()"></wm-button>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow50">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn80">
+                                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="URL"
+                                                                            name="EducationList1" dataset="bind:Variables.dvGetEducationDetails.dataSet" navigation="Scroll">
+                                                                            <wm-listtemplate layout="inline" name="listtemplate6">
+                                                                                <wm-container class="media-left" name="container23_1">
+                                                                                    <wm-icon name="icon5_1" iconclass="fa fa-book"></wm-icon>
+                                                                                </wm-container>
+                                                                                <wm-container class="media-body" name="container24">
+                                                                                    <wm-label class="p media-heading" name="Name" caption="bind:Variables.dvGetEducationDetails.dataSet[$i].collageName" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                                                                                </wm-container>
+                                                                            </wm-listtemplate>
+                                                                        </wm-list>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow118">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn162_1">
+                                                        <wm-label padding="unset 0.5em" name="label49_1" caption=""></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn163_1"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow14_1">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn24">
+                                                        <wm-container class="app-elevated-container  intro" name="container18_1">
+                                                            <wm-layoutgrid name="layoutgrid14_1">
+                                                                <wm-gridrow name="gridrow49_1">
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn77_1">
+                                                                        <wm-label padding="unset 0.5em" caption="Place Lived" fontweight="bold" class="h3" name="label34_2"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn78_1"></wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow50_1">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn79_1">
+                                                                        <wm-button class="btn-link" caption="add city" type="button" margin="unset 0.5em" iconclass="wi wi-add-circle-outline fa-lg" name="button9" on-click="Widgets.svcreateplaceslivedDialog.open()"></wm-button>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow51">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn81_1">
+                                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="URL"
+                                                                            name="PlacesLivedList1" dataset="bind:Variables.dvGetPlaceDetails.dataSet" navigation="Scroll">
+                                                                            <wm-listtemplate layout="inline" name="listtemplate7">
+                                                                                <wm-container class="media-left" name="container25">
+                                                                                    <wm-icon name="icon6_1" iconclass="fa fa-home"></wm-icon>
+                                                                                </wm-container>
+                                                                                <wm-container class="media-body" name="container26">
+                                                                                    <wm-label class="p media-heading" name="Name" caption="bind:Variables.dvGetPlaceDetails.dataSet[$i].cityName" fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                                                                                </wm-container>
+                                                                            </wm-listtemplate>
+                                                                        </wm-list>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="1" name="gridcolumn166_1"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn25_1">
+                                                        <wm-container class="app-elevated-container intro" name="container19">
+                                                            <wm-layoutgrid name="layoutgrid15">
+                                                                <wm-gridrow name="gridrow52">
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn83">
+                                                                        <wm-label padding="unset 0.5em" caption="Family" fontweight="bold" class="h3" name="label35"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn84"></wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow53">
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn85">
+                                                                        <wm-button class="btn-link" caption="add relation" type="button" margin="unset 0.5em" iconclass="wi wi-add-circle-outline fa-lg" name="button10" on-click="Widgets.svcreatefamilydetailsDialog.open()"></wm-button>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn86"></wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow54">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn87">
+                                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="URL"
+                                                                            name="FamilyList2" dataset="bind:Variables.dvGetFamilyDetails.dataSet" navigation="None">
+                                                                            <wm-listtemplate layout="inline" name="listtemplate9">
+                                                                                <wm-container class="media-left" name="container29">
+                                                                                    <wm-icon iconclass="fa fa-home" name="icon8"></wm-icon>
+                                                                                </wm-container>
+                                                                                <wm-container class="media-body" name="container30">
+                                                                                    <wm-label class="p media-heading" name="Name" caption="bind:Variables.dvGetFamilyDetails.dataSet[$i].relation.relName + &quot; : &quot; +Variables.dvGetFamilyDetails.dataSet[$i].familyMemberName"
+                                                                                        fontunit="em" padding="unset unset unset 1.25em"></wm-label>
+                                                                                </wm-container>
+                                                                            </wm-listtemplate>
+                                                                        </wm-list>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-tabpane>
+                                        <wm-tabpane name="tabpane3" title="friends">
+                                            <wm-container name="container17">
+                                                <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Media List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="none" dataset="bind:Variables.FacebookFriendsList1test.dataSet"
+                                                    navigation="Scroll" name="list5">
+                                                    <wm-listtemplate layout="media" name="listtemplate5_2">
+                                                        <wm-container class="media-left media-top" name="container14_1">
+                                                            <wm-picture class="media-object" width="32pt" height="32pt" picturesource="bind:Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.profileImage" name="picture7_1"></wm-picture>
+                                                        </wm-container>
+                                                        <wm-container class="media-body" padding="unset 1.5em unset 1.25em" name="container15_1">
+                                                            <wm-label class="pull-left" caption="bind:Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.fname + Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.lname" margin="0em unset 0.5em unset"
+                                                                fontsize="1.143" fontunit="em" name="label31_1"></wm-label>
+                                                            <wm-label class="pull-right text-muted" caption="Time" name="label32_1"></wm-label>
+                                                            <wm-label caption="Description" class="p text-muted" name="label33_1"></wm-label>
+                                                        </wm-container>
+                                                        <wm-container class="media-right" horizontalalign="right" padding="unset 1em unset unset" name="container16_1">
+                                                            <wm-menu autoclose="outsideClick" caption="" type="anchor" iconclass="wi wi-more-vert" menuposition="down,left" name="menu1"></wm-menu>
+                                                        </wm-container>
+                                                    </wm-listtemplate>
+                                                </wm-list>
+                                            </wm-container>
+                                        </wm-tabpane>
+                                    </wm-tabs>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn23_2"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow15">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn24_2"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn29"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn30"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow14_2">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn25_2"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn26_1">
+                                    <wm-layoutgrid name="layoutgrid8_1">
+                                        <wm-gridrow name="gridrow17">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn32"></wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn33"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-list listclass="list-group" template="true" template-name="Media Post" itemsperrow="xs-1 sm-2 md-2 lg-2" class="media list-card" statehandler="none" name="PostList2" dataset="bind:Variables.getLoggedUserPosts.dataSet"
+                                        navigation="Scroll">
+                                        <wm-listtemplate layout="media" name="listtemplate3">
+                                            <wm-container name="container9" class="app-elevated-container" backgroundcolor="#ffffff" padding="5px" margin="5px" backgroundattachment="fixed" visibility="visible" display="block">
+                                                <wm-layoutgrid name="layoutgrid24">
+                                                    <wm-gridrow name="gridrow120">
+                                                        <wm-gridcolumn columnwidth="6" name="gridcolumn167_1">
+                                                            <wm-container display="flex" name="container21_2">
+                                                                <wm-picture resizemode="cover" pictureaspect="None" shape="circle" width="40px" height="40px" picturesource="bind:Variables.getLoggedUserPosts.dataSet[$i].usersByFromUserId.profileImage" name="picture9_1"></wm-picture>
+                                                                <wm-layoutgrid name="layoutgrid25_2">
+                                                                    <wm-gridrow name="gridrow121">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn168_1">
+                                                                            <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.getLoggedUserPosts.dataSet[$i].usersByFromUserId.fname+' '+Variables.getLoggedUserPosts.dataSet[$i].usersByFromUserId.lname"
+                                                                                name="label62_1"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow name="gridrow122_1">
+                                                                        <wm-gridcolumn columnwidth="12" padding="0px unset unset unset" name="gridcolumn169_1">
+                                                                            <wm-label padding="0em 0.5em unset 0.5em" margin="0px unset unset unset" caption="bind:Variables.getLoggedUserPosts.dataSet[$i].createdAt | timeFromNow" name="label63_1"></wm-label>
+                                                                            <wm-icon iconclass="fa fa-globe" animation="bounce" name="icon4"></wm-icon>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-container>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="6" horizontalalign="right" name="gridcolumn170_1">
+                                                            <wm-container display="block" horizontalalign="right" cursor="pointer" name="container22_2"></wm-container>
+                                                            <wm-anchor margin="unset 0.5em" iconclass="fa fa-close fa-lg" caption="" name="anchor3"></wm-anchor>
+                                                            <wm-popover popoverwidth="130" popoverheight="40" margin="unset 0.5em" content="savePostPopover" iconclass="fa fa-ellipsis-v fa-lg" caption="" animation="flash" name="popover2"></wm-popover>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow123_2">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn171_1">
+                                                            <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.getLoggedUserPosts.dataSet[$i].postContent" name="label64_2"></wm-label>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow124_2">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn172_2">
+                                                            <wm-video controls="controls" videopreload="none" name="video1" width="100%" height="250px" show="bind:Variables.getLoggedUserPosts.dataSet[$i].postTypeId==1" mp4format="bind:Variables.getLoggedUserPosts.dataSet[$i].post"></wm-video>
+                                                            <wm-picture resizemode="cover" width="100%" height="250px" picturesource="bind:Variables.getLoggedUserPosts.dataSet[$i].post" name="picture10" show="bind:Variables.getLoggedUserPosts.dataSet[$i].postTypeId==2"></wm-picture>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow125_1">
+                                                        <wm-gridcolumn columnwidth="6" name="gridcolumn173_1">
+                                                            <wm-icon iconclass="fa fa-thumbs-up fa-lg" name="icon5"></wm-icon>
+                                                            <wm-label padding="unset 0.5em" caption="bind:Variables.getLoggedUserPosts.dataSet[$i].likes" name="label65_2"></wm-label>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="6" name="gridcolumn174_2">
+                                                            <wm-container horizontalalign="right" name="container23">
+                                                                <wm-label padding="unset 0.5em" caption="168 comments" name="label66"></wm-label>
+                                                                <wm-label padding="unset 0.5em" caption="125 shares" name="label67"></wm-label>
+                                                            </wm-container>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <hr>
+                                                    <wm-gridrow name="gridrow126_1">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn175_2"></wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow127_1">
+                                                        <wm-gridcolumn columnwidth="4" horizontalalign="center" name="gridcolumn176_1">
+                                                            <wm-button class="btn-default" caption="Like" type="button" margin="unset 0.5em" iconclass="fa fa-thumbs-o-up fa-lg" name="button15_1"></wm-button>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="4" horizontalalign="center" name="gridcolumn177_1">
+                                                            <wm-icon iconclass="" name="icon6"></wm-icon>
+                                                            <wm-button class="btn-default" caption="Comment" type="button" margin="unset 0.5em" iconclass="fa fa-comment-o fa-lg" on-click="Widgets.commentDialoguePage.open()" name="button16"></wm-button>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="4" horizontalalign="center" name="gridcolumn178_1">
+                                                            <wm-button class="btn-default" caption="Share" type="button" margin="unset 0.5em" iconclass="fa fa-share fa-lg" name="button17"></wm-button>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-container>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn27_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow36">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn54"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn55"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn56"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5"></wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" name="UserbioDialog" title="Intro" iconclass="" modal="true">
+        <wm-form errormessage="" captionposition="left" title="" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.svEditUserBio.dataSet" captionalign="left" name="editUsersForm4" on-success="Widgets.svedituserbioDialog.close()">
+            <wm-layoutgrid columns="2" name="layoutgrid21">
+                <wm-gridrow name="gridrow101">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn161">
+                        <wm-form-field name="Users_bio" displayname="Bio" key="Users.bio" type="string" show="true" widget="textarea" placeholder="Describe who you are"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow93">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn147">
+                        <wm-form-field name="Users_coverImage" readonly="false" displayname="Cover Image" key="Users.coverImage" type="string" show="false" widget="text" inputtype="text" placeholder="" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.coverImage"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow94">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn148">
+                        <wm-form-field name="Users_dob" readonly="false" displayname="Dob" key="Users.dob" type="date" show="false" widget="date" datepattern="MMM d, y" placeholder="Select date" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.dob"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn149">
+                        <wm-form-field name="Users_email" readonly="false" displayname="Email" key="Users.email" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.email"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow95">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn150">
+                        <wm-form-field name="Users_fname" readonly="false" displayname="Fname" key="Users.fname" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.fname"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn151">
+                        <wm-form-field name="Users_genderId" readonly="false" displayname="Gender Id" key="Users.genderId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.genderId"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow96">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn152">
+                        <wm-form-field name="Users_id" readonly="false" displayname="Id" key="Users.id" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn153">
+                        <wm-form-field name="Users_lname" readonly="false" displayname="Lname" key="Users.lname" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.lname"
+                            autocomplete="false"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow97">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn154">
+                        <wm-form-field name="Users_passcode" readonly="false" displayname="Passcode" key="Users.passcode" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.passcode"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn155">
+                        <wm-form-field name="Users_phNo" readonly="false" displayname="Ph No" key="Users.phNo" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.phNo"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow98">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn156">
+                        <wm-form-field name="Users_profileImage" readonly="false" displayname="Profile Image" key="Users.profileImage" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.profileImage"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn157">
+                        <wm-form-field name="Users_relationshipStatusId" readonly="false" displayname="Relationship Status Id" key="Users.relationshipStatusId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"
+                            defaultvalue="bind:Variables.svGetUserByEmail.dataSet.relationshipStatusId"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow99">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn158">
+                        <wm-form-field name="Users_websiteLink" readonly="false" displayname="Website Link" key="Users.websiteLink" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.websiteLink"
+                            autocomplete="false" disabled="false"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="editprofilepictureDialog" title="Edit Profile Picture" iconclass="fa fa-camera fa-lg" modal="true">
+        <wm-form errormessage="" captionposition="left" title="" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.editProfilePicture.dataSet" captionalign="left" name="editUsersForm1" on-success="Widgets.editprofilepictureDialog.close()"
+            on-beforesubmit="editUsersForm1Beforesubmit($event, widget, $data)">
+            <wm-layoutgrid columns="2" name="layoutgrid17">
+                <wm-gridrow name="gridrow71">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn115">
+                        <wm-container name="container20">
+                            <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload4" on-select="Variables.FileServiceUploadFile3.invoke()"></wm-fileupload>
+                        </wm-container>
+                        <wm-form-field name="Users_profileImage" readonly="false" displayname="Profile Image" key="Users.profileImage" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.profileImage"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow64">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn103">
+                        <wm-form-field name="Users_bio" readonly="false" displayname="Bio" key="Users.bio" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.bio"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow65">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn104">
+                        <wm-form-field name="Users_coverImage" readonly="false" displayname="Cover Image" key="Users.coverImage" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.coverImage"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn105">
+                        <wm-form-field name="Users_dob" readonly="false" displayname="Dob" key="Users.dob" type="date" show="false" widget="date" datepattern="MMM d, y" placeholder="Select date" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.dob"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow66">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn106">
+                        <wm-form-field name="Users_email" readonly="false" displayname="Email" key="Users.email" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.email"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn107">
+                        <wm-form-field name="Users_fname" readonly="false" displayname="Fname" key="Users.fname" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.fname"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow67">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn108">
+                        <wm-form-field name="Users_genderId" readonly="false" displayname="Gender Id" key="Users.genderId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.genderId"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn109">
+                        <wm-form-field name="Users_id" readonly="false" displayname="Id" key="Users.id" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow68">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn110">
+                        <wm-form-field name="Users_lname" readonly="false" displayname="Lname" key="Users.lname" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.lname"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn111">
+                        <wm-form-field name="Users_passcode" readonly="false" displayname="Passcode" key="Users.passcode" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.passcode"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow69">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn112">
+                        <wm-form-field name="Users_phNo" readonly="false" displayname="Ph No" key="Users.phNo" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.profileImage"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn113">
+                        <wm-form-field name="Users_relationshipStatusId" readonly="false" displayname="Relationship Status Id" key="Users.relationshipStatusId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"
+                            defaultvalue="bind:Variables.svGetUserByEmail.dataSet.relationshipStatusId"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow70">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn114">
+                        <wm-form-field name="Users_websiteLink" readonly="false" displayname="Website Link" key="Users.websiteLink" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.websiteLink"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Submit" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Submit" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="AddWorkDialogue" title="Work" iconclass="fa fa-laptop fa-lg" modal="true">
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svCreateAddWork.dataSet" captionalign="left" name="createWorkingForm1" on-success="Widgets.svcreateaddworkDialog.close()">
+            <wm-layoutgrid columns="1" name="layoutgrid18_1">
+                <wm-gridrow name="gridrow59">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn105_2">
+                        <wm-form-field name="Working_companyName" readonly="false" displayname="Company Name" key="Working.companyName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow60">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn106_2">
+                        <wm-form-field name="Working_designation" readonly="false" displayname="Designation" key="Working.designation" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow61">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn107_2">
+                        <wm-form-field name="Working_city" readonly="false" displayname="City" key="Working.city" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow62">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn108_2">
+                        <wm-form-field name="Working_description" readonly="false" displayname="Description" key="Working.description" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow63">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn109_1">
+                        <wm-form-field readonly="false" displayname="From Year" type="integer" show="true" widget="number" textalign="right" inputtype="number" placeholder="Enter value" name="form_field43"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn113_1">
+                        <wm-form-field name="Working_toYear" readonly="false" displayname="To Year" key="Working.toYear" type="integer" show="true" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow64_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn110_1"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow65_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn111_1">
+                        <wm-form-field name="Working_id" readonly="false" displayname="Id" key="Working.id" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow66_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn112_1">
+                        <wm-form-field name="Working_userId" readonly="false" displayname="User Id" key="Working.userId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="svcreateeducationDialog" title="Education" iconclass="fa fa-book fa-lg" modal="true">
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svCreateEducation.dataSet" captionalign="left" name="createEducationForm1" on-success="Widgets.svcreateeducationDialog.close()">
+            <wm-layoutgrid columns="1" name="layoutgrid19">
+                <wm-gridrow name="gridrow66_2">
+                    <wm-composite name="composite1">
+                        <wm-label class="h4 control-label" caption="Education Details" name="label37"></wm-label>
+                    </wm-composite>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow67_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn114_1">
+                        <wm-form-field name="Education_collageName" readonly="false" displayname="Collage Name" key="Education.collageName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow68_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn115_1">
+                        <wm-form-field name="Education_educationTypeId" displayname="Education Type Id" key="Education.educationTypeId" type="integer" show="true" widget="select" dataset="bind:Variables.dvGetEducationType.dataSet" datafield="All Fields" displayfield="eduType"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow69_1">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn116">
+                        <wm-form-field name="Education_fromYear" readonly="false" displayname="From Year" key="Education.fromYear" type="integer" show="true" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn118_1">
+                        <wm-form-field name="Education_toYear" readonly="false" displayname="To Year" key="Education.toYear" type="integer" show="true" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow70_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn117">
+                        <wm-form-field name="Education_id" readonly="false" displayname="Id" key="Education.id" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow71_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn118"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow72">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn119">
+                        <wm-form-field name="Education_userId" readonly="false" displayname="User Id" key="Education.userId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="svcreateplaceslivedDialog" title="Places Lived" iconclass="fa fa-home fa-lg" modal="true">
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svCreatePlacesLived.dataSet" captionalign="left" name="createPlacesLivedForm1" on-success="Widgets.svcreateplaceslivedDialog.close()">
+            <wm-layoutgrid columns="1" name="layoutgrid20">
+                <wm-gridrow name="gridrow71_2"></wm-gridrow>
+                <wm-gridrow name="gridrow72_1">
+                    <wm-composite name="composite2">
+                        <wm-label class="h4 control-label" caption="PlacesLived Details" name="label36_2"></wm-label>
+                    </wm-composite>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow73">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn119_1">
+                        <wm-form-field readonly="false" name="PlacesLived_cityName" displayname="City Name" key="PlacesLived.cityName" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow74">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn120">
+                        <wm-form-field readonly="false" name="PlacesLived_id" displayname="Id" key="PlacesLived.id" type="integer" show="false" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow75">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn121">
+                        <wm-form-field readonly="false" name="PlacesLived_placeTypeId" displayname="Place Type Id" key="PlacesLived.placeTypeId" type="integer" show="true" widget="select" dataset="bind:Variables.dvGetPlaceType.dataSet" datafield="All Fields"
+                            displayfield="cityType"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow76">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn122">
+                        <wm-form-field readonly="false" name="PlacesLived_userId" displayname="User Id" key="PlacesLived.userId" type="integer" show="false" widget="number" textalign="right" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" class="form-reset btn-default" iconclass="wi wi-refresh" display-name="Reset" type="reset"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" type="submit"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="svcreatefamilydetailsDialog" title="svCreateFamilyDetails Info" iconclass="wi wi-edit" modal="true">
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svCreateFamilyDetails.dataSet" captionalign="left" name="createFamilyForm1" on-success="Widgets.svcreatefamilydetailsDialog.close()">
+            <wm-layoutgrid columns="1" name="layoutgrid21_1">
+                <wm-gridrow name="gridrow77"></wm-gridrow>
+                <wm-gridrow name="gridrow78">
+                    <wm-composite name="composite3">
+                        <wm-label class="h4 control-label" caption="Family Details" name="label37_1"></wm-label>
+                    </wm-composite>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow79">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn123">
+                        <wm-form-field readonly="false" name="Family_familyMemberName" displayname="Family Member Name" key="Family.familyMemberName" type="string" show="true" widget="text"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow80">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn124">
+                        <wm-form-field readonly="false" name="Family_id" displayname="Id" key="Family.id" type="integer" show="false" widget="number" textalign="right"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow81">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn125">
+                        <wm-form-field readonly="false" name="Family_relationId" displayname="Relation" key="Family.relationId" type="integer" show="true" widget="select" dataset="bind:Variables.dvGetRelationType.dataSet" datafield="All Fields" displayfield="relName"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow82">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn126">
+                        <wm-form-field readonly="false" name="Family_userId" displayname="User Id" key="Family.userId" type="integer" show="false" widget="number" textalign="right" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" class="form-reset btn-default" iconclass="wi wi-refresh" display-name="Reset" type="reset"></wm-form-action>
+            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" type="submit"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Hobbies" iconclass="wi wi-file-text" name="addHobbies">
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button13"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid25">
+            <wm-gridrow name="gridrow94_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn142">
+                    <wm-picture resizemode="cover" name="picture8" picturesource="resources/images/hobbies.png" width="100%"></wm-picture>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow95_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn144">
+                    <wm-container name="container20_1" horizontalalign="center" margin="unset unset 0px unset" padding="unset unset 0px unset">
+                        <wm-label padding="0em 0.5em unset 0.5em" name="label46" caption="Add Hobbies" textalign="center" class="h3" fontweight="bold" margin="0px unset" color="#000000"></wm-label>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow91" padding=".5em 0em unset 0em">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn137">
+                    <wm-label padding="0em unset" name="label40" caption="What do you love to do? Choose from the popular hobbies below or add others." textalign="center" margin="0px unset" class="h6" fontweight="bold"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <hr>
+            <wm-gridrow name="gridrow92">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn139" padding="2em unset unset unset">
+                    <wm-list listclass="list-group" itemsperrow="xs-2 sm-3 md-3 lg-3" template="true" template-name="Contact Card" class="list-card" statehandler="none" name="HobbieTypeList1" dataset="bind:Variables.svHobbieType.dataSet" navigation="Scroll"
+                        horizontalalign="center">
+                        <wm-listtemplate layout="media" name="listtemplate4_1">
+                            <wm-container name="container21_1" on-click="Variables.dvAddHobbies.createRecord()">
+                                <wm-label padding=".5em 1em .5em 01em" name="label45" caption="bind:Variables.svHobbieType.dataSet[$i].hobbieName" borderstyle="solid" borderwidth=".8px" bordercolor="#e0e0e0"></wm-label>
+                                <wm-label padding="unset 0.5em" name="label41" caption="bind:Variables.svHobbieType.dataSet[$i].id" show="false"></wm-label>
+                            </wm-container>
+                        </wm-listtemplate>
+                    </wm-list>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Cover Image" iconclass="wi wi-file-text" name="coverImage">
+        <wm-dialogactions name="dialogactions3"></wm-dialogactions>
+        <wm-form errormessage="" captionposition="top" title="Form" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.svEditCoverImage.dataSet" captionalign="left" name="editUsersForm1_1" on-beforesubmit="editUsersForm1_1Beforesubmit($event, widget, $data)"
+            class="Primary">
+            <wm-layoutgrid columns="1" name="layoutgrid26">
+                <wm-gridrow name="gridrow94_2">
+                    <wm-composite name="composite5">
+                        <wm-label class="h4 control-label" caption="Users Details" name="label48"></wm-label>
+                    </wm-composite>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow95_2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn143">
+                        <wm-form-field name="Users_bio" readonly="false" displayname="Bio" key="Users.bio" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.bio" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow96_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn144_1">
+                        <wm-form-field name="Users_coverImage" readonly="false" displayname="Cover Image" key="Users.coverImage" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                        <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload3" on-select="Variables.FileServiceUploadFile5.invoke()"></wm-fileupload>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow97_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn145">
+                        <wm-form-field name="Users_dob" readonly="false" displayname="Dob" key="Users.dob" type="date" show="false" widget="date" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.dob" datepattern="MMM d, y" placeholder="Select date"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow98_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn146">
+                        <wm-form-field name="Users_email" readonly="false" displayname="Email" key="Users.email" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.email" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow99_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn147_1">
+                        <wm-form-field name="Users_fname" readonly="false" displayname="Fname" key="Users.fname" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.fname" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow100">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn148_1">
+                        <wm-form-field name="Users_genderId" readonly="false" displayname="Gender Id" key="Users.genderId" type="integer" show="false" widget="number" textalign="right" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.genderId" inputtype="number"
+                            placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow101_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn149_1">
+                        <wm-form-field name="Users_id" readonly="false" displayname="Id" key="Users.id" type="integer" show="false" widget="number" textalign="right" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id" inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow102">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn150_1">
+                        <wm-form-field name="Users_lname" readonly="false" displayname="Lname" key="Users.lname" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.lname" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow103">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn151_1">
+                        <wm-form-field name="Users_passcode" readonly="false" displayname="Passcode" key="Users.passcode" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.passcode" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow104">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn152_1">
+                        <wm-form-field name="Users_phNo" readonly="false" displayname="Ph No" key="Users.phNo" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.phNo" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow105">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn153_1">
+                        <wm-form-field name="Users_profileImage" readonly="false" displayname="Profile Image" key="Users.profileImage" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.profileImage" inputtype="text"
+                            placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow106">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn154_1">
+                        <wm-form-field name="Users_relationshipStatusId" readonly="false" displayname="Relationship Status Id" key="Users.relationshipStatusId" type="integer" show="false" widget="number" textalign="right" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.relationshipStatusId"
+                            inputtype="number" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow107">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn155_1">
+                        <wm-form-field name="Users_websiteLink" readonly="false" displayname="Website Link" key="Users.websiteLink" type="string" show="false" widget="text" defaultvalue="bind:Variables.svGetUserByEmail.dataSet.websiteLink" inputtype="text"
+                            placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Submit" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Submit" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-form>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" name="EditProfile" title="EditProfile" iconclass="wi wi-edit" modal="true">
+        <wm-layoutgrid name="layoutgrid25_1">
+            <wm-gridrow name="gridrow122">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn160">
+                    <wm-label padding="unset 0.5em" name="label45_1" caption="Profile Picture" fontweight="bold"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn161_1" horizontalalign="right">
+                    <wm-label padding="unset 0.5em" name="label46_1" caption="Edit" color="blue" on-click="Widgets.editprofilepictureDialog.open()"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow123">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn162" horizontalalign="center">
+                    <wm-picture resizemode="cover" name="picture8_1" shape="circle" width="150" height="150" picturesource="bind:Variables.svGetUserByEmail.dataSet.profileImage" bordercolor="#e3e3e3" borderstyle="solid" borderwidth=".5px"></wm-picture>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow127">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn167">
+                    <wm-label padding="unset 0.5em" name="label47" caption=""></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn168"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow137">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn185">
+                    <wm-label padding="unset 0.5em" caption="" color="blue" on-click="Widgets.coverImage.open()" name="label62"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn186"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow124">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn164">
+                    <wm-label padding="unset 0.5em" name="label48_1" caption="Cover photo" fontweight="bold"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn169" horizontalalign="right">
+                    <wm-label padding="unset 0.5em" name="label49" caption="Edit" color="blue" on-click="Widgets.coverImage.open()"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow138">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn187">
+                    <wm-label padding="unset 0.5em" caption="" color="blue" on-click="Widgets.coverImage.open()" name="label63"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn188"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow125">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn165" horizontalalign="center">
+                    <wm-picture resizemode="cover" name="picture9" shape="rounded" picturesource="bind:Variables.svGetUserByEmail.dataSet.coverImage" width="85%" height="300"></wm-picture>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow126">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn166">
+                    <wm-label padding="unset 0.5em" name="label50" caption=""></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow139">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn189">
+                    <wm-label padding="unset 0.5em" caption="" color="blue" on-click="Widgets.coverImage.open()" name="label64"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow128">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn170">
+                    <wm-label padding="unset 0.5em" name="label51" fontweight="bold" caption="Bio"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn171" horizontalalign="right">
+                    <wm-label padding="unset 0.5em" name="label52" caption="Edit" color="blue" on-click="Widgets.UserbioDialog.open()"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow129">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn172" horizontalalign="center">
+                    <wm-label padding="unset 0.5em" name="label53" caption="bind:Variables.svGetUserByEmail.dataSet.bio"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow130">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn174">
+                    <wm-label padding="unset 0.5em" name="label54" caption=""></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow140">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn190">
+                    <wm-label padding="unset 0.5em" caption="" color="blue" on-click="Widgets.coverImage.open()" name="label65"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow133">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn178">
+                    <wm-label padding="unset 0.5em" name="label55" caption="Customise your Intro" fontweight="bold"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn179" horizontalalign="right"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow131">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn175">
+                    <wm-label padding="unset 0.5em" name="label57" caption=""></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow136">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn184">
+                    <wm-label padding="unset 0.5em" caption="" color="blue" on-click="Widgets.coverImage.open()" name="label61"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow132">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn176">
+                    <wm-label padding="unset 0.5em" name="label58" caption="Hobbies" fontweight="bold"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn177" horizontalalign="right">
+                    <wm-label padding="unset 0.5em" name="label59" caption="Add" color="blue" on-click="Widgets.addHobbies.open()"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow134">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn180">
+                    <wm-label padding="unset 0.5em" name="label60" caption=""></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow135">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn182" horizontalalign="center">
+                    <wm-button class="btn-default" caption="Edit Your Profile Info" type="button" margin="unset 0.5em" name="button14_1" width="90%" backgroundcolor="#dde8ff" color="blue" fontweight="bold" on-click="Widgets.EditProfile.close()"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+</wm-page>

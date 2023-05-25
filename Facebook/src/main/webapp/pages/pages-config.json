@@ -1,0 +1,168 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Home",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Landing1",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Landing1_Copy",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login_Copy",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Profile",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Profile_Copy",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "userid",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "Suggestions",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Ttesting",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "birthdays",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "commentPartial",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "events",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "footer_Copy",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "friendRequest",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "friends",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "friends_Copy",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "header_Copy",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "hobbiesPartial",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "inputPostPartial",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "leftpanel",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "leftpanel_Copy",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "leftpanel_Events",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "leftpanel_Notifications",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "leftpanel_savedPost",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "notificationPartial",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "notifications",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "postPartial",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "savePostPopover",
+  "type" : "POPOVER",
+  "params" : [ ]
+}, {
+  "name" : "savedPost",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "shortProfile",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "test",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "test_topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+}, {
+  "name" : "testing",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+}, {
+  "name" : "userLogin",
+  "type" : "PAGE",
+  "params" : [ ]
+} ]

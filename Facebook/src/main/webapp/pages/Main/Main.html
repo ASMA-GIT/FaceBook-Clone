@@ -1,0 +1,50 @@
+<wm-page name="mainpage" pagetitle="Main">
+    <wm-header content="header" name="header" height="auto"></wm-header>
+    <wm-content name="content">
+        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav" animation="slide-in"></wm-left-panel>
+        <wm-page-content columnwidth="8" name="mainContent" padding="unset 15px">
+            <wm-container name="container1">
+                <wm-liveform errormessage="" title="Post Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.fbTestVar.dataSet" captionalign="left" captionposition="floating" name="PostLiveForm1" on-beforeservicecall="PostLiveForm1Beforeservicecall($event, $operation, $data, options)">
+                    <wm-layoutgrid columns="1" name="layoutgrid3">
+                        <wm-gridrow name="gridrow9">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                                <wm-form-field name="postContent" displayname="Post Content" show="true" primary-key="false" generator="assigned" key="postContent" type="string" readonly="false" required="false" widget="text" maxchars="100" inputtype="text"
+                                    placeholder="Enter value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow10">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                                <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload1" on-select="Variables.FileServiceUploadFile.invoke()" maxfilesize="12"></wm-fileupload>
+                                <wm-form-field name="post" displayname="Post" show="true" primary-key="false" generator="assigned" key="post" type="string" widget="text"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow11">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                                <wm-form-field name="usersByFromUserId" displayname="Users By From User Id" show="true" primary-key="false" generator="assigned" key="usersByFromUserId" type="list" is-related="true" readonly="false" required="true" widget="select"
+                                    matchmode="startignorecase" placeholder="Select value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow12">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                                <wm-form-field name="usersByWithUserId" displayname="Users By With User Id" show="true" primary-key="false" generator="assigned" key="usersByWithUserId" type="list" is-related="true" readonly="false" required="false" widget="select"
+                                    matchmode="startignorecase" placeholder="Select value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow13">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn17">
+                                <wm-form-field name="postType" displayname="Post Type" show="true" primary-key="false" generator="assigned" key="postType" type="list" is-related="true" readonly="false" required="false" widget="select" matchmode="startignorecase"
+                                    dataset="bind:Variables.dvtestposttype.dataSet" displayfield="postType" placeholder="Select value"></wm-form-field>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                    <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number"></wm-form-field>
+                    <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+                    <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                </wm-liveform>
+                <wm-container name="container2" content="commentPartial"></wm-container>
+            </wm-container>
+        </wm-page-content>
+        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
+    </wm-content>
+    <wm-footer name="footer" content="footer"></wm-footer>
+</wm-page>

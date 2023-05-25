@@ -1,0 +1,35 @@
+<wm-partial name="header" type="header">
+    <wm-layoutgrid name="headerlayout" class="headerrow">
+        <wm-gridrow name="headerrow" height="50px">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="1" horizontalalign="center" padding="7px unset unset unset">
+                <wm-icon name="icon1" iconclass="resources/images/logos/facebook-logo.png" animation="bounceIn"></wm-icon>
+                <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/logos/facebook-logo.png" height="40" shape="circle" width="40"></wm-picture>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn9" horizontalalign="right" padding="7px unset unset unset">
+                <wm-container name="container1" display="inline-flex">
+                    <wm-search name="searchUsers" type="search" matchmode="startignorecase" placeholder="Search" dataset="bind:Variables.dbSearchUsers.dataSet" displaylabel="bind:$[fname] +' '+ $[lname]" datafield="All Fields" searchkey="fname" searchon="typing"
+                        displayimagesrc="profileImage" class="search" on-select="Actions.goToPage_Profile_Copy.invoke()" datacompletemsg="no result found" on-submit="searchUsersSubmit($event, widget)"></wm-search>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn11"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn5" horizontalalign="center" padding="15px unset unset unset" class="navicons">
+                <wm-anchor margin="unset 0.5em" name="anchor1" iconclass="fa fa-home fa-lg" caption="" on-click="Actions.goToPage_Home.invoke()" iconposition="left" hint="Home" class="icons"></wm-anchor>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn6" horizontalalign="center" padding="15px unset unset unset" class="navicons">
+                <wm-anchor margin="unset 0.5em" name="anchor2" iconclass="fa fa-users fa-lg" caption="" on-click="Actions.goToPage_friends.invoke()" textalign="center" hint="Friends" class="icons"></wm-anchor>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn7" horizontalalign="center" padding="15px unset unset unset" class="navicons">
+                <wm-anchor margin="unset 0.5em" name="anchor3" caption="" iconclass="fa fa-user-plus fa-lg" hint="Friend requests" class="icons" on-click="Actions.goToPage_friendRequest.invoke()"></wm-anchor>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn8"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="2" name="gridcolumn13" horizontalalign="right" padding="6px unset unset unset" class="icons">
+                <wm-button class="btn-default find-btn" caption="Find Friends" type="button" margin=".3em unset unset 0.5em" name="button1" on-click="Actions.goToPage_Suggestions.invoke()" color="#000000" padding="unset 1em" fontweight="bold"></wm-button>
+                <wm-popover popoverwidth="440" margin="unset 0.5em unset 2.5em" name="popover2" iconclass="fa fa-bell fa-lg" caption="" hint="Notifications" class="icons" color="blue" contentsource="partial" popoverplacement="top" content="notificationPartial"></wm-popover>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="1" name="gridcolumn14" horizontalalign="center" padding="5px unset unset unset">
+                <wm-picture resizemode="cover" name="picture5" height="40" shape="circle" picturesource="bind:Variables.svGetUserByEmail.dataSet.profileImage" width="40" hint="Account" borderwidth="0.5px unset unset 0.5px" bordercolor="#000000" borderstyle="solid"
+                    on-click="Actions.goToPage_Profile.invoke()"></wm-picture>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

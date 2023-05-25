@@ -1,0 +1,131 @@
+<wm-partial type="leftnav" name="partial1">
+    <wm-label padding="unset 0.5em" name="label1" class="h2" caption="Events" fontweight="bold"></wm-label>
+    <wm-nav type="pills" layout="stacked" name="nav1">
+        <wm-nav-item name="nav_item1">
+            <wm-anchor caption="Notifications" iconclass="fa fa-user-plus fa-2x" class="active" name="anchor1" on-click="Actions.goToPage_notifications.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item2">
+            <wm-anchor caption="Home" iconclass="fa fa-home fa-2x" name="anchor2" on-click="Actions.goToPage_Home.invoke()"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+    <wm-container name="container2">
+        <wm-container name="container3"></wm-container>
+    </wm-container>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Create Event" iconclass="wi wi-file-text" name="createEvent">
+        <wm-dialogactions name="dialogactions2">
+            <wm-button class="btn-primary" caption="Create" on-click="closeDialog()" name="button3"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid3">
+            <wm-gridrow name="gridrow8">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                    <wm-picture resizemode="cover" name="picture7" width="100%" height="200px"></wm-picture>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow9">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn15">
+                    <wm-picture resizemode="cover" shape="circle" width="30px" height="30px" name="picture3_1" picturesource="bind:Variables.getUser.dataSet[$i].users.profileImage"></wm-picture>
+                    <wm-label padding="unset 0.5em" caption="bind:Variables.loggedInUser.dataSet.name" name="Username"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn16" horizontalalign="right">
+                    <wm-fileupload cleariconclass="wi wi-clear" cleariconhint="Clear" name="fileupload10" on-select="Variables.FileServiceUploadFile9.invoke()" caption="add cover photo" iconclass="fa fa-plus"></wm-fileupload>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow8_1">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn12"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn13_1"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow7">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn10_1"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn11"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow4">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn6">
+                    <wm-composite name="composite2">
+                        <wm-container class="col-md-9" name="container4">
+                            <wm-text name="text2" placeholder="Event title"></wm-text>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow5">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn8">
+                    <wm-composite name="composite4">
+                        <wm-container class="col-md-9" name="container6">
+                            <wm-date name="date2" placeholder="Start date"></wm-date>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                    <wm-composite name="composite5">
+                        <wm-container class="col-md-9" name="container7">
+                            <wm-date name="date3" placeholder="End date"></wm-date>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow6">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                    <wm-composite name="composite7">
+                        <wm-container class="col-md-9" name="container9">
+                            <wm-textarea name="textarea2" placeholder=""></wm-textarea>
+                        </wm-container>
+                    </wm-composite>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Information" iconclass="wi wi-file-text" name="createEvent2">
+        <wm-layoutgrid name="layoutgrid2">
+            <wm-gridrow name="gridrow9_1">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn14"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn15_1"></wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-layoutgrid name="layoutgrid3_1">
+            <wm-gridrow name="gridrow10">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn16_1">
+                    <wm-form errormessage="event creation failed" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svCreateEventForm.dataSet" captionalign="left" name="createEventsForm1">
+                        <wm-layoutgrid columns="2" name="layoutgrid4">
+                            <wm-gridrow name="gridrow13">
+                                <wm-composite name="composite5_1">
+                                    <wm-label class="h4 control-label" caption="Events Details" name="label7"></wm-label>
+                                </wm-composite>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow14">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn20">
+                                    <wm-form-field name="Events_eventTitle" readonly="false" displayname="Event Title" key="Events.eventTitle" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow14_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn21_1">
+                                    <wm-form-field name="Events_content" readonly="false" displayname="Content" key="Events.content" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow15">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn22">
+                                    <wm-form-field name="Events_startDate" readonly="false" displayname="Start Date" key="Events.startDate" type="date" show="true" widget="date" datepattern="MMM d, y" placeholder="Select date"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn23">
+                                    <wm-form-field name="Events_endDate" readonly="false" displayname="End Date" key="Events.endDate" type="date" show="true" widget="date" datepattern="MMM d, y" placeholder="Select date"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow16">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn24">
+                                    <wm-form-field name="Events_image" displayname="Image" key="Events.image" type="string" show="true" widget="text"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn25">
+                                    <wm-form-field name="Events_userId" readonly="false" displayname="User Id" key="Events.userId" type="integer" show="true" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                    </wm-form>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-dialogactions name="dialogactions2_1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button3_1"></wm-button>
+        </wm-dialogactions>
+    </wm-dialog>
+</wm-partial>

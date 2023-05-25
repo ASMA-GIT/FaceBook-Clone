@@ -1,0 +1,177 @@
+<wm-page name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" padding=".5em" name="gridcolumn1">
+                        <wm-tile name="tile1">
+                            <wm-layoutgrid name="layoutgrid2">
+                                <wm-gridrow name="gridrow2">
+                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" padding="1em 0em 0em 0em" name="gridcolumn2">
+                                        <wm-layoutgrid name="layoutgrid6">
+                                            <wm-gridrow name="gridrow12">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn21">
+                                                    <wm-picture resizemode="cover" name="picture2" width="85%" height="350px" picturesource="bind:Variables.dvtestdisplayFriendDetails.dataSet[$i].usersByUser1Id.coverImage"></wm-picture>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow13">
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn23" horizontalalign="right">
+                                                    <wm-picture shape="circle" pictureaspect="None" textalign="left" bordercolor="#c7c7c7" borderstyle="solid" borderwidth="1px" name="picture1" width="150px" height="150px" class="profilepic" picturesource="bind:Variables.staticVariable1.dataSet[0].id"></wm-picture>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn25">
+                                                    <wm-label width="100%" caption="label" fontweight="bold" class="h2" name="label1"></wm-label>
+                                                    <wm-anchor caption="link" display="inline" name="anchor1"></wm-anchor>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="4" name="gridcolumn26"></wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow3"></wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-tile>
+                        <wm-layoutgrid name="layoutgrid7">
+                            <wm-gridrow name="gridrow14">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn24_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn27" horizontalalign="left">
+                                    <wm-tabs type="static" statehandler="URL" name="tabs1" horizontalalign="left">
+                                        <wm-tabpane name="tabpane1" title="Posts">
+                                            <wm-layoutgrid name="layoutgrid6_1">
+                                                <wm-gridrow name="gridrow12_1">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn20">
+                                                        <wm-container name="container2_1">
+                                                            <wm-label padding="unset 0.5em" name="containerHeading" caption="Intro" fontweight="bold" class="h3"></wm-label>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="1" name="gridcolumn34"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn21_1">
+                                                        <wm-container name="container3">
+                                                            <wm-layoutgrid name="layoutgrid7_1">
+                                                                <wm-gridrow name="gridrow14_2">
+                                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn26_1">
+                                                                        <wm-container display="flex" name="container6">
+                                                                            <wm-picture resizemode="cover" pictureaspect="None" shape="circle" width="40px" height="40px" name="picture4"></wm-picture>
+                                                                            <wm-layoutgrid name="layoutgrid8">
+                                                                                <wm-gridrow name="gridrow15_1">
+                                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn27_1">
+                                                                                        <wm-label padding="unset 0.5em" width="100%" caption="label" name="label19"></wm-label>
+                                                                                    </wm-gridcolumn>
+                                                                                </wm-gridrow>
+                                                                                <wm-gridrow name="gridrow16">
+                                                                                    <wm-gridcolumn columnwidth="12" padding="0px unset unset unset" name="gridcolumn28">
+                                                                                        <wm-label padding="0em 0.5em unset 0.5em" margin="0px unset unset unset" caption="label" name="label20"></wm-label>
+                                                                                        <wm-icon iconclass="fa fa-globe" animation="bounce" name="icon1"></wm-icon>
+                                                                                    </wm-gridcolumn>
+                                                                                </wm-gridrow>
+                                                                            </wm-layoutgrid>
+                                                                        </wm-container>
+                                                                    </wm-gridcolumn>
+                                                                    <wm-gridcolumn columnwidth="6" horizontalalign="right" name="gridcolumn29_1">
+                                                                        <wm-container display="block" horizontalalign="right" cursor="pointer" name="container7"></wm-container>
+                                                                        <wm-anchor margin="unset 0.5em" iconclass="fa fa-close fa-lg" caption="" name="anchor2"></wm-anchor>
+                                                                        <wm-popover popoverwidth="130" popoverheight="40" margin="unset 0.5em" content="savePostPopover" iconclass="fa fa-ellipsis-v fa-lg" caption="" animation="flash" name="popover1"></wm-popover>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow17"></wm-gridrow>
+                                                                <wm-gridrow name="gridrow18">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn31">
+                                                                        <wm-picture resizemode="contain" width="100%" height="400px" picturesource="bind:Variables.dvDisplayPosts.dataSet[$i].post" name="picture5"></wm-picture>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                                <wm-gridrow name="gridrow22">
+                                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn38">
+                                                                        <wm-label padding="unset 0.5em" width="100%" caption="Label" name="label25"></wm-label>
+                                                                    </wm-gridcolumn>
+                                                                </wm-gridrow>
+                                                            </wm-layoutgrid>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow13_1">
+                                                    <wm-gridcolumn columnwidth="12" name="UserPostHistory"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-tabpane>
+                                        <wm-tabpane name="tabpane2" title="About">
+                                            <wm-layoutgrid name="layoutgrid6_2">
+                                                <wm-gridrow name="gridrow13_2">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn22"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn23_1"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow14_1">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn24"></wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn25_1"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-tabpane>
+                                        <wm-tabpane name="tabpane3" title="friends">
+                                            <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Media List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="none" name="FriendsList1" dataset="bind:Variables.UserFriendList.dataSet"
+                                                navigation="Scroll" groupby="requestedAt">
+                                                <wm-listtemplate layout="media" name="listtemplate1">
+                                                    <wm-container class="media-left media-top" name="container3_1">
+                                                        <wm-picture name="Picture" class="media-object" width="32pt" height="32pt"></wm-picture>
+                                                    </wm-container>
+                                                    <wm-container class="media-body" padding="unset 1.5em unset 1.25em" name="container4">
+                                                        <wm-label class="pull-left" caption="Name" name="Name" margin="0em unset 0.5em unset" fontsize="1.143" fontunit="em"></wm-label>
+                                                        <wm-label name="Time" class="pull-right text-muted" caption="Time"></wm-label>
+                                                        <wm-label caption="Description" name="Description" class="p text-muted"></wm-label>
+                                                    </wm-container>
+                                                    <wm-container class="media-right" horizontalalign="right" padding="unset 1em unset unset" name="container5">
+                                                        <wm-menu autoclose="outsideClick" caption="" type="anchor" iconclass="wi wi-more-vert" menuposition="down,left" name="menu1"></wm-menu>
+                                                    </wm-container>
+                                                </wm-listtemplate>
+                                            </wm-list>
+                                        </wm-tabpane>
+                                    </wm-tabs>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn23_2"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow15">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn24_2"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn29"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn30"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="3" horizontalalign="center" padding=".5em" name="gridcolumn4">
+                        <wm-tile horizontalalign="center" backgroundcolor="#404040" color="#fff" padding="1em 0em" name="tile2">
+                            <wm-label caption="300" fontweight="bold" width="100%" margin="0em" name="label3" fontsize="1.5" fontunit="em"></wm-label>
+                            <wm-label caption="posts" width="100%" class="text-uppercase" margin="0px" name="label4"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" horizontalalign="center" padding=".5em" name="gridcolumn5">
+                        <wm-tile backgroundcolor="#404040" color="#ffab0a" padding="1em 0em" name="tile3">
+                            <wm-label caption="21K" fontweight="bold" width="100% " margin="0em " name="label5" fontsize="1.5" fontunit="em"></wm-label>
+                            <wm-label caption="followers " width="100% " class="text-uppercase " margin="0px " name="label6"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3 " horizontalalign="center " padding=".5em " name="gridcolumn6">
+                        <wm-tile backgroundcolor="#404040 " color="#89e5fa " padding="1em 0em " name="tile4">
+                            <wm-label caption="200 " fontweight="bold " width="100%" margin="0px" name="label7" fontsize="1.5" fontunit="em"></wm-label>
+                            <wm-label caption="reposts" class="text-uppercase" margin="0px" name="label8"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" horizontalalign="center" padding=".5em" name="gridcolumn7">
+                        <wm-tile backgroundcolor="#404040" color="#fff" padding="1em 0em" name="tile5">
+                            <wm-label caption="53" fontweight="bold" width="100%" margin="0px" name="label9" fontsize="1.5" fontunit="em"></wm-label>
+                            <wm-label caption="Views" width="100%" class="text-uppercase" margin="0px" name="label10"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="center" padding=".5em" name="gridcolumn8">
+                        <wm-tile padding="2em .5em" name="tile6">
+                            <wm-label caption="about" width="100%" class="h3 text-uppercase" margin="0px" name="label11"></wm-label>
+                            <wm-label caption="I'm an independent thought leader on social and emerging technologies at a leading software firm. I am interested in Golf and Opera apart from my day job." width="70%" padding=".5em 0em" name="label12"></wm-label>
+                            <wm-label caption="Birthday : 15 JUN 1982" width="100%" name="label13"></wm-label>
+                            <wm-label caption="Political Views : Liberal" width="100%" name="label14"></wm-label>
+                            <wm-label caption="Location : Sunnyvale, CA" width="100%" name="label15"></wm-label>
+                        </wm-tile>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

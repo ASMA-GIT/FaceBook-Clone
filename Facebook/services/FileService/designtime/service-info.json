@@ -1,0 +1,8 @@
+{
+  "id" : "FileService",
+  "type" : "JavaService",
+  "packageNames" : [ "com.facebook.fileservice" ],
+  "serviceClassNames" : [ "com.facebook.fileservice.FileService" ],
+  "title" : "FileService",
+  "mockEnabled" : false
+}

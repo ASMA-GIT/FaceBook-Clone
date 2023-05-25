@@ -1,0 +1,208 @@
+<wm-page pagetitle="Home" name="page1" cache="false">
+    <wm-header content="header" name="header1" on-load="header1Load($event, widget)"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1" class="leftnav" overflow="auto"></wm-left-panel>
+        <wm-page-content columnwidth="8" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-label padding="unset 0.5em" name="label1" caption=""></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-label padding="unset 0.5em" name="label2" caption=""></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn7"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn6">
+                        <wm-container name="container4_1" content="inputPostPartial" class="app-elevated-container"></wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn8"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                        <wm-label padding="unset 0.5em" name="label9" caption=""></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow15">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn26">
+                        <wm-label padding="unset 0.5em" caption="" name="label10"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn27"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn8_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn9">
+                        <wm-list listclass="list-group" template="true" template-name="Media Post" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media list-card" statehandler="none" name="PostList1" dataset="bind:Variables.getAlluserPosts.dataSet" navigation="Scroll"
+                            orderby="createdAt:desc" on-click="Widgets.Comment.open()">
+                            <wm-listtemplate layout="media" name="listtemplate1">
+                                <wm-layoutgrid name="layoutgrid2" class="post-card">
+                                    <wm-gridrow name="gridrow6">
+                                        <wm-gridcolumn columnwidth="10" name="gridcolumn11">
+                                            <wm-container display="flex" name="container2">
+                                                <wm-picture resizemode="cover" pictureaspect="None" shape="circle" width="40px" height="40px" picturesource="bind:Variables.getAlluserPosts.dataSet[$i].usersByFromUserId.profileImage" name="picture1"></wm-picture>
+                                                <wm-layoutgrid name="layoutgrid3" class="name-desc">
+                                                    <wm-gridrow name="gridrow7">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn12">
+                                                            <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.getAlluserPosts.dataSet[$i].usersByFromUserId.fname + &quot; &quot;+Variables.getAlluserPosts.firstRecord.usersByFromUserId.lname"
+                                                                name="label3" fontweight="bold"></wm-label>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow8">
+                                                        <wm-gridcolumn columnwidth="12" padding="0px unset unset unset" name="gridcolumn13">
+                                                            <wm-label padding="0em 0.5em unset 0.5em" margin="0px unset unset unset" caption="bind:Variables.getAlluserPosts.dataSet[$i].createdAt | timeFromNow" name="label4"></wm-label>
+                                                            <wm-icon iconclass="fa fa-globe" animation="bounce" name="icon1"></wm-icon>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="2" horizontalalign="right" name="gridcolumn14">
+                                            <wm-container display="block" horizontalalign="right" cursor="pointer" name="container3_1">
+                                                <wm-label padding="unset 0.5em" name="label15_1" show="false" caption="bind:Variables.getAlluserPosts.dataSet[$i].id"></wm-label>
+                                            </wm-container>
+                                            <wm-anchor margin="unset 0.5em" iconclass="fa fa-close fa-lg" caption="" name="anchor1"></wm-anchor>
+                                            <wm-popover popoverwidth="130" popoverheight="40" margin="unset 0.5em" content="savePostPopover" iconclass="fa fa-ellipsis-v fa-lg" caption="" animation="flash" name="popover1"></wm-popover>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow9">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                                            <wm-label padding="unset 0.5em" width="100%" caption="bind:Variables.getAlluserPosts.dataSet[$i].postContent" name="label5"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow10">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                                            <wm-picture resizemode="cover" width="100%" height="400px" picturesource="bind:Variables.getAlluserPosts.dataSet[$i].post" name="picture2" show="bind:Variables.getAlluserPosts.dataSet[$i].postTypeId==2"></wm-picture>
+                                            <wm-container name="container9">
+                                                <wm-video controls="controls" videopreload="auto" mp4format="bind:Variables.getAlluserPosts.dataSet[$i].post" width="100%" height="300px" loop="true" name="video1" show="bind:Variables.getAlluserPosts.dataSet[$i].postTypeId==1"></wm-video>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow11">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                                            <wm-icon iconclass="fa fa-thumbs-up fa-lg" name="icon2"></wm-icon>
+                                            <wm-label padding="unset 0.5em" caption="bind:Variables.dvDisplayPosts.dataSet[$i].likes + 'k'" name="label6"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn18">
+                                            <wm-container horizontalalign="right" name="container4">
+                                                <wm-label padding="unset 0.5em" caption="168 comments" name="label7"></wm-label>
+                                                <wm-label padding="unset 0.5em" caption="125 shares" name="label8"></wm-label>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <hr>
+                                    <wm-gridrow name="gridrow12">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn19"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow13">
+                                        <wm-gridcolumn columnwidth="4" horizontalalign="center" name="gridcolumn20">
+                                            <wm-button class="btn-default" caption="Like" type="button" margin="unset 0.5em" iconclass="fa fa-thumbs-o-up fa-lg" name="button1"></wm-button>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="4" horizontalalign="center" name="gridcolumn21">
+                                            <wm-icon iconclass="" name="icon3"></wm-icon>
+                                            <wm-icon name="icon5" iconclass="fa fa-comment-o fa-lg"></wm-icon>
+                                            <wm-label padding="unset 0.5em" name="label18" on-click="Widgets.Comment.open();Variables.dvSendCommentNotification.createRecord()" caption="Comment"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="4" horizontalalign="center" name="gridcolumn22">
+                                            <wm-button class="btn-default" caption="Share" type="button" margin="unset 0.5em" iconclass="fa fa-share fa-lg" name="button3"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn10"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn23"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn24"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn25"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+        <wm-right-panel columnwidth="2" content="rightnav" name="right_panel1"></wm-right-panel>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Comments" iconclass="wi wi-file-text" name="Comment">
+        <wm-layoutgrid name="layoutgrid5">
+            <wm-gridrow name="gridrow18">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn32">
+                    <wm-container name="container5" horizontalalign="center">
+                        <wm-label padding="unset 0.5em" name="label15" caption="Username" textalign="center" fontweight="bold"></wm-label>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow19">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn34">
+                    <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Email List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="none" name="CommentList1" dataset="bind:Variables.svDisplayComments.dataSet"
+                        navigation="On-Demand" paginationclass="btn-default">
+                        <wm-listtemplate layout="inline" name="listtemplate2">
+                            <wm-container name="pictureContainer" class="media-left">
+                                <wm-picture width="32pt" height="32pt" name="Picture" shape="circle" class="media-object" picturesource="bind:Variables.svDisplayComments.dataSet[$i].users.profileImage"></wm-picture>
+                            </wm-container>
+                            <wm-container class="media-body" padding="unset unset unset 1.25em" name="container7">
+                                <wm-label name="Name" class="media-heading pull-left" caption="bind:Variables.svDisplayComments.dataSet[$i].users.fname+' '+Variables.svDisplayComments.dataSet[$i].users.lname" fontunit="em" fontweight="bold" color="#000000"></wm-label>
+                                <wm-label name="Content" caption="bind:Variables.svDisplayComments.dataSet[$i].comment" class="p text-muted"></wm-label>
+                                <wm-label name="Time" caption="bind:Variables.svDisplayComments.dataSet[$i].createdAt | timeFromNow" class="pull-right" margin="0px unset unset unset"></wm-label>
+                            </wm-container>
+                            <wm-container class="media-right" name="container8"></wm-container>
+                        </wm-listtemplate>
+                    </wm-list>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-layoutgrid name="layoutgrid5_1">
+            <wm-gridrow name="gridrow18_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn30"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow19_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn32_1">
+                    <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.svPostComment.dataSet" captionalign="left" name="createCommentForm1">
+                        <wm-layoutgrid columns="1" name="layoutgrid6">
+                            <wm-gridrow name="gridrow22">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn34_1">
+                                    <wm-picture resizemode="cover" name="picture5" width="30px" height="30px" shape="circle"></wm-picture>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="11" name="gridcolumn40">
+                                    <wm-form-field name="Comment_comment" key="Comment.comment" type="string" show="true" widget="textarea" width="100%"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow23">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn35">
+                                    <wm-form-field name="Comment_column6" readonly="false" displayname="Column6" key="Comment.column6" type="string" show="false" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow24">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn36">
+                                    <wm-form-field name="Comment_commenteeId" readonly="false" displayname="Commentee Id" key="Comment.commenteeId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"
+                                        defaultvalue="bind:Variables.svGetUserByEmail.dataSet.id"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow25">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn37">
+                                    <wm-form-field name="Comment_createdAt" readonly="false" displayname="Created At" key="Comment.createdAt" type="timestamp" show="false" widget="timestamp" datepattern="MMM d, y h:mm:ss a" placeholder="Select date time"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow26">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn38">
+                                    <wm-form-field name="Comment_id" readonly="false" displayname="Id" key="Comment.id" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow27">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn39">
+                                    <wm-form-field name="Comment_postId" readonly="false" displayname="Post Id" key="Comment.postId" type="integer" show="false" widget="number" textalign="right" inputtype="number" placeholder="Enter value" defaultvalue="bind:Widgets.PostList1.selecteditem.id"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" disabled="false" widget-type="button" type="reset" update-mode="true"></wm-form-action>
+                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                    </wm-form>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-dialogactions name="dialogactions1"></wm-dialogactions>
+    </wm-dialog>
+</wm-page>

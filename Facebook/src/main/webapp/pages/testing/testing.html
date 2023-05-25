@@ -1,0 +1,65 @@
+<wm-page pagetitle="Testing" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow15"></wm-gridrow>
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn17">
+                        <wm-layoutgrid name="layoutgrid2">
+                            <wm-gridrow name="gridrow3">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                                    <wm-picture resizemode="cover" width="100%" height="250px" class="cover-image" name="picture1"></wm-picture>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow4">
+                                <wm-gridcolumn columnwidth="3" horizontalalign="right" name="gridcolumn4">
+                                    <wm-container display="block" name="container1">
+                                        <wm-picture shape="circle" pictureaspect="None" textalign="left" bordercolor="#c7c7c7" borderstyle="solid" borderwidth="1px" width="150px" height="150px" class="profilepic" name="picture2" margin="-70px unset unset 10px"></wm-picture>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" horizontalalign="left" padding="unset unset unset 3em" name="gridcolumn5">
+                                    <wm-label width="100%" caption="bind:Variables.svGetUserByEmail.dataSet.fname + ' '+Variables.svGetUserByEmail.dataSet.lname" fontweight="bold" class="h1" color="#000000" backgroundattachment="fixed" name="label1"></wm-label>
+                                    <wm-anchor caption="bind:Variables.svGetUserByEmail.dataSet.email" display="inline" name="anchor1"></wm-anchor>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="5" name="gridcolumn6">
+                                    <wm-layoutgrid name="layoutgrid3_1">
+                                        <wm-gridrow name="gridrow5">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                                <wm-label padding="unset 0.5em" caption="" name="label2"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn8"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow6">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn9">
+                                                <wm-label padding="unset 0.5em" caption="" name="label3"></wm-label>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn10"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-container horizontalalign="right" name="container2">
+                                        <wm-button class="btn-default" caption="Edit Profile" type="button" margin="unset 0.5em" iconclass="wi wi-mode-edit" backgroundcolor="#dadada" fontweight="bold" name="button3"></wm-button>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn11"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn18"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-layoutgrid name="layoutgrid4">
+                <wm-gridrow name="gridrow7">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn12"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn13"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow8">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn14"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn15"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

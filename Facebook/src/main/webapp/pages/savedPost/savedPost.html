@@ -1,0 +1,50 @@
+<wm-page pagetitle="Saved Post" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftpanel_savedPost" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid3">
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn5"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn6"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn7"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn8"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-list listclass="list-group" template="true" template-name="Media Post" itemsperrow="xs-1 sm-2 md-2 lg-3" class="media list-card" statehandler="URL" dataset="bind:Variables.dvSavedPosts.dataSet" navigation="Scroll" name="list3">
+                <wm-listtemplate layout="media" name="listtemplate3">
+                    <wm-container name="container8">
+                        <wm-container class="media-left" padding="unset unset unset 0.5em" name="container9">
+                            <wm-picture shape="circle" width="32pt" height="32pt" picturesource="bind:Variables.dvSavedPosts.dataSet[$i].post.usersByFromUserId.profileImage" name="picture3"></wm-picture>
+                        </wm-container>
+                        <wm-container class="media-body" name="container10">
+                            <wm-label class="h4" caption="bind:Variables.dvSavedPosts.dataSet[$i].post.usersByFromUserId.fname + Variables.dvSavedPosts.dataSet[$i].post.usersByFromUserId.lname" margin="0px unset" whitespace="nowrap" name="label9"></wm-label>
+                            <wm-label caption="bind:Variables.dvSavedPosts.dataSet[$i].post.createdAt | timeFromNow" class="p text-muted" whitespace="nowrap" margin="0px unset unset unset" name="label10"></wm-label>
+                        </wm-container>
+                        <wm-card picturesource="bind:Variables.dvSavedPosts.dataSet[$i].post.post" name="card3">
+                            <wm-card-content padding="1.25em" name="card_content3">
+                                <wm-label class="p text-muted" whitespace="nowrap" caption="bind:Variables.dvSavedPosts.dataSet[$i].post.postContent" margin="unset unset 1em unset" name="label12"></wm-label>
+                            </wm-card-content>
+                            <wm-card-footer name="card_footer3">
+                                <wm-layoutgrid name="layoutgrid4">
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn columnwidth="4" class="col-xs-4" name="gridcolumn9">
+                                            <wm-anchor class="text-warning" caption="READ MORE" name="anchor7"></wm-anchor>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="8" horizontalalign="right" class="col-xs-8" name="gridcolumn10">
+                                            <wm-anchor iconclass="fa fa-thumbs-up fa-2x" class="btn btn-transparent" caption="75" margin="unset 1em unset unset" name="anchor8"></wm-anchor>
+                                            <wm-anchor iconclass="wi wi-comments fa-2x" caption="50" class="btn btn-transparent" name="anchor9"></wm-anchor>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-card-footer>
+                        </wm-card>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-list>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

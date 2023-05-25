@@ -1,0 +1,217 @@
+// Global overrides
+@brand-secondary: #BABFC2;
+
+@brand-disabled: #D4D4D4;
+
+// Font face
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: url('fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} 
+
+
+//Heading overrides 
+.h1, .h2, .h3, .h4, .h5, .h6 {	
+    font-family: @headings-font-family;	
+}	
+
+h1, .h1{	
+    font-size: @font-size-h1;	
+    font-weight: bold;	
+    text-transform: @wm-text-transform-h1;	
+}	
+h2, .h2{	
+    font-size: @font-size-h2;	
+    font-weight: @wm-font-weight-h2;	
+    text-transform: @wm-text-transform-h2;	
+}	
+h3, .h3{	
+    font-size: @font-size-h3;	
+    font-weight: @wm-font-weight-h3;	
+    text-transform: @wm-text-transform-h3;	
+}	
+h4, .h4{	
+    font-size: @font-size-h4;	
+    font-weight: @wm-font-weight-h4;	
+    text-transform: @wm-text-transform-h4;	
+}	
+h5, .h5{	
+    font-size: @font-size-h5;	
+    font-weight: @wm-font-weight-h5;	
+    text-transform: @wm-text-transform-h5;	
+}	
+h6, .h6{	
+    font-size: @font-size-h6;	
+    font-weight: @wm-font-weight-h6;	
+    text-transform: @wm-text-transform-h6;	
+}
+
+//Font-size  h3 panel heading override
+.panel{
+    .panel-heading {
+        h3.panel-title {
+                font-size: @font-size-h3;
+                .heading, .app-icon {
+                    font-size: @font-size-h3;
+                }
+            }
+    }
+}
+// App header bg color variable override
+.app-header, .app-mobile-header {
+    background-color: @wm-header-bg-color;
+}
+//header search bg color variable override
+.app-search {
+    background-color: @wm-header-bg-color;
+}
+.app-icon{
+        font-weight: Normal;
+    }
+// Font Weight
+@wm-font-weight: normal;
+@wm-font-weight-body: Normal;
+@wm-font-weight-h1: bold;
+@wm-font-weight-h2: Normal;
+@wm-font-weight-h3: Normal;
+@wm-font-weight-h4: Normal;
+@wm-font-weight-h5: Normal;
+@wm-font-weight-h6: Normal;
+
+// Font Case
+@wm-text-transform: none;
+@wm-text-transform-body: None;
+@wm-text-transform-h1: None;
+@wm-text-transform-h2: None;
+@wm-text-transform-h3: None;
+@wm-text-transform-h4: None;
+@wm-text-transform-h5: None;
+@wm-text-transform-h6: None;
+
+
+//Header variables
+@wm-header-text-color: #000000;
+@wm-header-bg: #2c3049;
+@wm-header-bg-color: #fff;
+
+//Left & Right Panels
+//left panel Variables
+@wm-left-panel-link-color: #000000;
+@wm-left-panel-bg: #FFFFFF;
+@wm-left-panel-link-active-bg: rgba(0, 0, 0, 0.08);
+
+
+//New custom Variables
+//Header Active text color
+@wm-header-active-text-color: #1778F2;
+
+//left nav active color
+@wm-left-panel-link-active-color: #1778F2;
+
+//Text Sub-headings color
+@wm-subheading-color: #A0A4A9;
+
+//Table header color
+@wm-grid-header-bg: #344ded;
+
+//Table header text color
+@wm-grid-header-text-color: #FFFFFF;
+
+// Border Radius override
+//== Components
+@border-radius-base:        4px;
+@border-radius-large:       4px;
+@border-radius-small:       0px;
+  
+
+// Custom variables  Primary to Secondary
+//
+// Variables
+// --------------------------------------------------
+
+//** Global textual link color.
+@link-color:            #21ADF0;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+
+//** Global background color for active items (e.g., navs or dropdowns).
+@component-active-bg:       @brand-secondary;
+
+
+//** Badge text color in active nav link
+@badge-active-color:          @link-color;
+
+
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        @component-active-bg;
+
+
+
+//== Pills
+@nav-pills-active-link-hover-bg:            @component-active-bg;
+
+
+// Navbar links
+@navbar-default-link-color:                @brand-secondary;
+@navbar-default-link-hover-color:          darken(@brand-secondary, 30%);
+@navbar-default-link-active-color:         @brand-secondary;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           darken(@navbar-default-brand-color, 10%);
+@navbar-default-toggle-icon-bar-bg:        darken(@navbar-default-brand-color, 10%);
+
+//== Tabs
+@nav-tabs-active-link-hover-color:          @brand-secondary;
+
+
+//== List group
+//
+//##
+@list-group-active-bg:          fade(@brand-secondary, 3%);
+//** Text color for content within active list items
+@list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
+
+
+// //== Pagination
+@pagination-active-bg:                 @brand-secondary;
+
+// //== Pager
+@pager-active-bg:                      @pagination-active-bg;
+
+//== Breadcrumbs
+//** Breadcrumb text color
+// @breadcrumb-color:              @brand-secondary;
+
+//State colors
+
+@wm-state-primary-text:             @brand-primary;
+@wm-state-primary-bg:               lighten(@brand-primary, 45%);
+@wm-state-primary-border:           darken(spin(@wm-state-primary-bg, -10), 5%);
+
+@wm-state-secondary-text:             @brand-secondary;
+@wm-state-secondary-bg:               lighten(@brand-secondary, 45%);
+@wm-state-secondary-border:           darken(spin(@wm-state-secondary-bg, -10), 5%);
+
+// Border switch
+@wm-input-border: @input-border;
+
+//Spacing
+@padding-base-vertical: 12px;
+@padding-small-vertical: 5px;
+@padding-large-vertical: 1em;
+@padding-large-vertical-card: 2em;
+@padding-small-vertical-list: 10px;
+@padding-top-left-panel: 0.2em;
+@padding-bottom-left-panel: 0.35em;
+@wm-wizard-line-height: 46px;
+@wm-wizard-border-width: 23px;
+@wm-navbar-min-height: 50px;
+@wm-navbar-padding-vertical: 16px;
+@white-space-normal: nowrap;

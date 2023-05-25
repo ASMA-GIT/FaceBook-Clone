@@ -1,0 +1,110 @@
+<wm-page pagetitle="Test" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid2">
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3" height="15vh">
+                        <wm-label padding="unset 0.5em" name="label5" caption=""></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn5_1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn5">
+                        <wm-html name="html2" horizontalalign="left" height="100%" width="100%">
+                            <h1>facebook</h1>
+                            <p> Facebook helps you connect and share with the people in your life.</p>
+                        </wm-html>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="5" name="gridcolumn6" horizontalalign="left">
+                        <wm-login name="login1">
+                            <wm-form name="form1" on-submit="Variables.svGetUserByEmail.invoke()">
+                                <wm-composite name="composite3">
+                                    <wm-container class="col-md-12" name="container3">
+                                        <wm-text placeholder="Email address" name="j_useremail" class="app-login-username" updateon="default" required="true" tabindex="1" type="email" margin="unset unset 10px unset"></wm-text>
+                                    </wm-container>
+                                </wm-composite>
+                                <wm-composite name="composite4">
+                                    <wm-container class="col-md-12" name="container4">
+                                        <wm-text type="password" name="j_password" placeholder="Enter password" class="app-login-password" updateon="default" required="true" maxchars="12" margin="unset unset 10px unset"></wm-text>
+                                    </wm-container>
+                                </wm-composite>
+                                <wm-button type="submit" caption="Sign in" width="100%" class="app-login-button btn-primary" name="button1" fontweight="bold"></wm-button>
+                                <wm-composite name="composite5" class="form-bottom" horizontalalign="center">
+                                    <wm-anchor margin="1em 0.5em" name="anchor1" caption="Forgotten password?" width="100%"></wm-anchor>
+                                    <wm-button class="btn-default" caption="Create new account" type="button" margin="unset 0.5em" name="button4" fontweight="bold" borderstyle="solid" padding="15px unset" on-click="Widgets.dialog2.open()"></wm-button>
+                                </wm-composite>
+                            </wm-form>
+                            <wm-layoutgrid name="layoutgrid3">
+                                <wm-gridrow name="gridrow9">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn12" horizontalalign="center">
+                                        <wm-label padding="unset 0.5em" name="label4" caption="Create a Page for a celebrity, brand or business."></wm-label>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-login>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="1" name="gridcolumn4"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="" iconclass="" name="signUpForm">
+        <wm-dialogactions name="dialogactions2"></wm-dialogactions>
+        <wm-liveform errormessage="" title="Sign Up" iconclass="" defaultmode="Edit" dataset="bind:Variables.svCreateUser.dataSet" captionalign="left" captionposition="top" name="UsersLiveForm1" subheading="It's quick and easy.">
+            <wm-layoutgrid columns="2" name="layoutgrid4">
+                <wm-gridrow name="gridrow10">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn13">
+                        <wm-form-field name="fname" displayname="Fname" show="true" primary-key="false" generator="assigned" key="fname" type="string" readonly="false" required="true" widget="text" maxchars="30" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn14">
+                        <wm-form-field name="lname" displayname="Lname" show="true" primary-key="false" generator="assigned" key="lname" type="string" readonly="false" required="false" widget="text" maxchars="30" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn25">
+                        <wm-form-field name="phNo" displayname="Ph No" show="true" primary-key="false" generator="assigned" key="phNo" type="string" readonly="false" required="false" widget="text" maxchars="30" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                        <wm-form-field name="dob" displayname="Dob" show="true" primary-key="false" generator="assigned" key="dob" type="date" readonly="false" required="false" widget="date" datepattern="MMM d, y" placeholder="Select date" outputformat="yyyy-MM-dd"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn18">
+                        <wm-form-field name="passcode" displayname="Passcode" show="true" primary-key="false" generator="assigned" key="passcode" type="string" readonly="false" required="true" widget="text" maxchars="255" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow17">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn27">
+                        <wm-form-field name="email" displayname="Email" show="true" primary-key="false" generator="assigned" key="email" type="string" readonly="false" required="true" widget="text" maxchars="40" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow13">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn20">
+                        <wm-form-field name="coverImage" displayname="Cover Image" show="false" primary-key="false" generator="assigned" key="coverImage" type="string" readonly="false" required="false" widget="text" maxchars="2048" inputtype="text" placeholder="Enter value"></wm-form-field>
+                        <wm-form-field name="gender" displayname="Gender" show="true" primary-key="false" generator="assigned" key="gender" type="list" is-related="true" readonly="false" required="false" widget="select" matchmode="startignorecase"
+                            placeholder="Select value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn21">
+                        <wm-form-field name="bio" displayname="Bio" show="false" primary-key="false" generator="assigned" key="bio" type="string" readonly="false" required="false" widget="text" maxchars="110" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn22">
+                        <wm-form-field name="websiteLink" displayname="Website Link" show="false" primary-key="false" generator="assigned" key="websiteLink" type="string" readonly="false" required="false" widget="text" maxchars="30" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow15">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn24">
+                        <wm-form-field name="relationshipStatus" displayname="Relationship Status" show="false" primary-key="false" generator="assigned" key="relationshipStatus" type="list" is-related="true" readonly="false" required="false" widget="select"
+                            matchmode="startignorecase" placeholder="Select value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+            <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-default" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" widget-type="button" type="button" update-mode="true"></wm-form-action>
+            <wm-form-action key="save" display-name="Sign Up" show="true" class="form-save btn-success" iconclass="fa fa-check-circle" title="signUp" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+        </wm-liveform>
+    </wm-dialog>
+</wm-page>

@@ -1,0 +1,111 @@
+{
+  "username" : "{WM_CLOUD_MYSQL_USER_NAME}",
+  "password" : "{WM_CLOUD_MYSQL_PASSWORD}",
+  "url" : "jdbc:mariadb://{WM_CLOUD_MYSQL_HOST}/facebook?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true",
+  "driverClass" : "org.mariadb.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "facebook",
+  "packageName" : "com.facebook.facebook",
+  "dbType" : "MySQL",
+  "host" : "{WM_CLOUD_MYSQL_HOST}",
+  "dbName" : "facebook",
+  "port" : "",
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "chat",
+    "schema" : null
+  }, {
+    "table" : "hobbies",
+    "schema" : null
+  }, {
+    "table" : "notify_type",
+    "schema" : null
+  }, {
+    "table" : "relation",
+    "schema" : null
+  }, {
+    "table" : "education",
+    "schema" : null
+  }, {
+    "table" : "post_type",
+    "schema" : null
+  }, {
+    "table" : "events",
+    "schema" : null
+  }, {
+    "table" : "users",
+    "schema" : null
+  }, {
+    "table" : "post",
+    "schema" : null
+  }, {
+    "table" : "places_lived",
+    "schema" : null
+  }, {
+    "table" : "place_type",
+    "schema" : null
+  }, {
+    "table" : "relationship_status",
+    "schema" : null
+  }, {
+    "table" : "messages",
+    "schema" : null
+  }, {
+    "table" : "feedback",
+    "schema" : null
+  }, {
+    "table" : "working",
+    "schema" : null
+  }, {
+    "table" : "saved_post",
+    "schema" : null
+  }, {
+    "table" : "notification",
+    "schema" : null
+  }, {
+    "table" : "comment",
+    "schema" : null
+  }, {
+    "table" : "Gender",
+    "schema" : null
+  }, {
+    "table" : "friend",
+    "schema" : null
+  }, {
+    "table" : "test",
+    "schema" : null
+  }, {
+    "table" : "education_type",
+    "schema" : null
+  }, {
+    "table" : "liked_post",
+    "schema" : null
+  }, {
+    "table" : "family",
+    "schema" : null
+  }, {
+    "table" : "blocked_users",
+    "schema" : null
+  }, {
+    "table" : "hobbie_type",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "update",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null,
+    "reImport" : false
+  },
+  "readOnly" : false,
+  "metadataDialect" : ""
+}

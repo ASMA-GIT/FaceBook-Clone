@@ -1,0 +1,62 @@
+<wm-page pagetitle="Friends" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftpanel_Copy" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn6"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn7">
+                        <wm-label padding="unset 0.5em" caption="" fontweight="bold" class="h2" name="label5"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn9"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn10"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn8"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn11"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn15"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn16">
+                        <wm-label padding="unset 0.5em" caption="Birthday List" fontweight="bold" class="h2" name="label3"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn17"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn12"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn13">
+                        <wm-label padding="unset 0.5em" caption="" fontweight="bold" class="h2" name="label4"></wm-label>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn14"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="2" name="gridcolumn1"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="7" name="gridcolumn5">
+                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" statehandler="none" name="FriendList1" dataset="bind:Variables.FacebookFriendsList1test.dataSet"
+                            navigation="Scroll">
+                            <wm-listtemplate layout="inline" name="listtemplate2">
+                                <wm-container class="media-left" name="container4">
+                                    <wm-picture width="32pt" height="32pt" name="Picture" shape="circle" picturesource="bind:Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.profileImage" class="media-object"></wm-picture>
+                                </wm-container>
+                                <wm-container class="media-body" padding="unset unset unset 1.25em" name="container5">
+                                    <wm-label name="Name" class="p media-heading" caption="bind:Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.fname + ' ' + Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.lname" fontsize="1.143"
+                                        fontunit="em" color="#000000" fontweight="bold"></wm-label>
+                                    <wm-label name="dob" caption="Bithday is on" class="p text-muted"></wm-label>
+                                    <wm-label caption="bind:Variables.FacebookFriendsList1test.dataSet[$i].usersByUser2Id.dob  | toDate: 'dd, MMMM'" class="p text-muted" name="label6"></wm-label>
+                                </wm-container>
+                                <wm-container class="media-right media-top" name="container6">
+                                    <wm-button class="btn-transparent" iconclass="wi wi-cake fa-2x" name="button2" color="blue"></wm-button>
+                                </wm-container>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="3" name="gridcolumn2"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn3"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn4"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

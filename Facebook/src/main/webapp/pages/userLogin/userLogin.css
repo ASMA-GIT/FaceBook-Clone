@@ -1,0 +1,33 @@
+.app-html-container{
+    text-align: center;
+    align-items: center
+}
+.app-html-container h1{
+    color: blue;
+    font-size: 60px;
+    font-weight: 750;
+}
+.app-html-container p{
+    font-size: 25px;
+    font-weight: 300;
+    color:black;
+}
+.form-elements{
+    padding: 20px;
+    background-color: white;
+    border-radius:10px;
+}
+.btn-default{
+    background-color: #43ba53;
+    color:white;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+.wm-app .form-control, .wm-app .form-group + .form-control {
+    padding: 20px;
+    border: 1px solid #b0b1b5;
+    border-radius: 6px;
+}
+.wm-app .form-control, .wm-app .form-group + .form-control:focus{
+    border: 1px solid #2245f5 !important;
+}

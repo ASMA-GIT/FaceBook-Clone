@@ -1,0 +1,99 @@
+<wm-partial name="partial1">
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Comments" iconclass="wi wi-file-text" name="commentDialoguePage">
+        <wm-layoutgrid name="layoutgrid3">
+            <wm-gridrow name="gridrow9_1">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn13_2"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn14_1"></wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-layoutgrid name="layoutgrid4_1">
+            <wm-gridrow name="gridrow11">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn17_1">
+                    <wm-container name="container6" display="flex">
+                        <wm-picture resizemode="cover" name="picture4" shape="circle" width="30px" height="30px" margin="unset 10px"></wm-picture>
+                        <wm-composite name="composite3" width="80%">
+                            <wm-container class="col-md-9" name="container7">
+                                <wm-textarea name="textarea3" width="100%" updateon="default" placeholder="Write a comment..."></wm-textarea>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-button class="btn-default" caption="" type="button" margin="unset 0.5em" name="button10" iconclass="fa fa-location-arrow fa-lg" height="25"></wm-button>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow12">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn19">
+                    <wm-container name="container6_1" content="commentPartial"></wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+        <wm-dialogactions name="dialogactions1">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button3"></wm-button>
+        </wm-dialogactions>
+    </wm-dialog>
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                <wm-container name="container2" display="flex">
+                    <wm-picture resizemode="cover" name="picture2" pictureaspect="None" shape="circle" width="40px" height="40px" picturesource="bind:Variables.dvDisplayPosts.dataSet[$i].usersByFromUserId.profileImage"></wm-picture>
+                    <wm-layoutgrid name="layoutgrid4">
+                        <wm-gridrow name="gridrow7">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                                <wm-label padding="unset 0.5em" name="label1" width="100%" caption="bind:Variables.dvDisplayPosts.dataSet[$i].usersByFromUserId.fname + Variables.dvDisplayPosts.dataSet[$i].usersByFromUserId.lname"></wm-label>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                        <wm-gridrow name="gridrow8">
+                            <wm-gridcolumn columnwidth="12" name="gridcolumn15" padding="0px unset unset unset">
+                                <wm-label padding="0em 0.5em unset 0.5em" name="label4" margin="0px unset unset unset" caption="bind:Variables.dvDisplayPosts.dataSet[$i].createdAt | timeFromNow"></wm-label>
+                                <wm-icon name="icon4" iconclass="fa fa-globe" animation="bounce"></wm-icon>
+                            </wm-gridcolumn>
+                        </wm-gridrow>
+                    </wm-layoutgrid>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="6" name="gridcolumn2" horizontalalign="right">
+                <wm-container name="container4" display="block" horizontalalign="right" cursor="pointer"></wm-container>
+                <wm-anchor margin="unset 0.5em" iconclass="fa fa-close fa-lg" caption="" name="anchor3"></wm-anchor>
+                <wm-popover popoverwidth="130" popoverheight="40" margin="unset 0.5em" name="popover2" content="savePostPopover" iconclass="fa fa-ellipsis-v fa-lg" caption="" animation="flash"></wm-popover>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                <wm-label padding="unset 0.5em" name="postDescrption" width="100%" caption="bind:Variables.dvDisplayPosts.dataSet[$i].postContent"></wm-label>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow9">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn17">
+                <wm-video controls="controls" videopreload="none" name="video1"></wm-video>
+                <wm-picture resizemode="cover" name="picture2_1" width="100%" height="400px" picturesource="bind:Variables.dvDisplayPosts.dataSet[$i].post"></wm-picture>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow8_1">
+            <wm-gridcolumn columnwidth="6" name="gridcolumn12">
+                <wm-icon name="icon4_1" iconclass="fa fa-thumbs-up fa-lg"></wm-icon>
+                <wm-label padding="unset 0.5em" name="label7" caption="bind:Variables.dvDisplayPosts.dataSet[$i].likes + 'k'"></wm-label>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="6" name="gridcolumn15_1">
+                <wm-container name="container3" horizontalalign="right">
+                    <wm-label padding="unset 0.5em" name="label5" caption="168 comments"></wm-label>
+                    <wm-label padding="unset 0.5em" name="label6" caption="125 shares"></wm-label>
+                </wm-container>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <hr>
+        <wm-gridrow name="gridrow10">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn16"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow7_1">
+            <wm-gridcolumn columnwidth="4" name="gridcolumn11" horizontalalign="center">
+                <wm-button class="btn-default" caption="Like" type="button" margin="unset 0.5em" name="postLike" iconclass="fa fa-thumbs-o-up fa-lg"></wm-button>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="4" name="gridcolumn13_1" horizontalalign="center">
+                <wm-icon name="icon6" iconclass=""></wm-icon>
+                <wm-button class="btn-default" caption="Comment" type="button" margin="unset 0.5em" name="postComment" iconclass="fa fa-comment-o fa-lg" on-click="Widgets.commentDialoguePage.open()"></wm-button>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="4" name="gridcolumn14" horizontalalign="center">
+                <wm-button class="btn-default" caption="Share" type="button" margin="unset 0.5em" name="button5" iconclass="fa fa-share fa-lg"></wm-button>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>
