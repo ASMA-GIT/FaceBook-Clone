@@ -61,32 +61,43 @@ Data base schema of facebook application.
 ### search a user
 ![search_user](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/b31fbb8c-2354-4972-9e30-53dd96465bfc)
 
+### user's profile
 ![pp1](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/a9f284ac-e53e-409b-af16-e8fcc8d00fd0)
 
+### user's details
 ![pp2](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/57ba197e-6e71-4d70-b585-45b0ffaa20a6)
 
+### user's posts
 ![pp3](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/555a4619-56f9-4db0-8158-0ce14dcec710)
 
+### edit user details
 ![edit_Profile](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/89c7ec51-9125-4657-bf28-3f49e5d4aa3d)
+
+### edit education details
 ![edu](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/47f37322-bdc0-4aab-b06e-c5a218df4fbb)
 
+### edit work details
 ![wp](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/80c5fb2b-29e3-4306-bfbc-06bd11f8522d)
 
-
+### places lived
 ![pl](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/4546fa3f-8c6f-46c7-b5b2-5f48c4a091d6)
 
+### cover image
 ![pp4](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/c3504a3f-3098-4cb1-8cb9-404bf6b50ba6)
 
+### about user
 ![pp5](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/443f4267-5c25-4f6d-9b25-7f1f663fdbf7)
 
+### friend requests
 ![requests](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/123a669e-2ed9-4b6a-8a49-1e1b710be0ad)
 
+### friend list
 ![Friends](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/ebda8cb1-454b-4b48-8b48-f46107d57a68)
 
 ### suggestions
 ![suggestions](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/b0a69ec4-81cb-469c-9caa-d6e2b6f2f3a0)
 
-
+### friends
 ![friends_PP](https://github.com/ASMA-GIT/FaceBook-Clone/assets/75538890/87c2d169-b577-41e9-a2f5-5417d379ed9b)
 
 ### events
